@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pika Prompt Generator — Free AI Video Prompts | iloveprompts.org</title>
+<meta name="description" content="Generate detailed Pika AI video prompts with camera movements, visual style, and motion effects. Create stunning AI video clips instantly.">
+<meta name="keywords" content="Pika prompt generator, Pika AI video prompts, Pika Labs prompts free, AI video prompt generator">
+<link rel="canonical" href="https://iloveprompts.org/iloveprompts-pika-prompt-generator.html">
+<meta property="og:title" content="Pika Prompt Generator — Free AI Video Prompts">
+<meta property="og:description" content="Generate detailed Pika AI video prompts with camera movements, visual style, and motion effects. Create stunning AI video clips instantly.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,700;12..96,800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d0d0f;--bg-card:#13131a;--bg-input:#1a1a24;--border:#22222e;--accent:#fc6c8f;--accent2:#fcb86c;--text-primary:#f0efff;--text-secondary:#8888aa;--text-muted:#44445a;--font-title:'Bricolage Grotesque',sans-serif;--font-mono:'DM Mono',monospace;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--text-primary);font-family:var(--font-title);font-size:15px;line-height:1.6;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;width:600px;height:600px;background:radial-gradient(circle,rgba(108,252,208,0.06) 0%,transparent 70%);border-radius:50%;top:-200px;right:-100px;pointer-events:none;z-index:0;}
+nav{position:sticky;top:0;z-index:100;background:rgba(13,13,15,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 24px;height:58px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{font-weight:800;font-size:18px;color:var(--text-primary);text-decoration:none;display:flex;align-items:center;gap:5px;}
+.nav-heart{color:#fc6c8f;}
+.nav-links{display:flex;gap:20px;list-style:none;}
+.nav-links a{color:var(--text-secondary);text-decoration:none;font-size:13px;font-weight:500;}
+.nav-links a:hover{color:var(--text-primary);}
+.hero{position:relative;z-index:1;padding:56px 24px 40px;max-width:800px;margin:0 auto;text-align:center;}
+.back-link{display:inline-flex;align-items:center;gap:6px;color:var(--text-muted);text-decoration:none;font-size:13px;font-family:var(--font-mono);margin-bottom:20px;}
+.back-link:hover{color:var(--text-secondary);}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(108,252,208,0.08);border:1px solid rgba(108,252,208,0.18);color:var(--accent);font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:20px;font-family:var(--font-mono);}
+.hero h1{font-size:clamp(32px,5vw,52px);font-weight:800;line-height:1.05;letter-spacing:-2px;margin-bottom:14px;}
+.hero h1 .g{background:linear-gradient(135deg,var(--accent) 0%,var(--accent2) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero p{color:var(--text-secondary);font-size:16px;max-width:500px;margin:0 auto;}
+.task-nav{position:relative;z-index:1;max-width:900px;margin:0 auto 28px;padding:0 24px;}
+.task-label{font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:0.12em;color:var(--text-muted);text-transform:uppercase;margin-bottom:10px;}
+.task-pills{display:flex;gap:8px;flex-wrap:wrap;}
+.task-pill{padding:8px 16px;border-radius:100px;border:1px solid var(--border);background:var(--bg-card);color:var(--text-secondary);font-size:13px;font-weight:600;cursor:pointer;transition:all 0.18s;}
+.task-pill:hover{border-color:#33334a;color:var(--text-primary);}
+.task-pill.active{background:rgba(108,252,208,0.08);border-color:rgba(108,252,208,0.3);color:var(--accent);}
+.main{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:0 24px 80px;display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start;}
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:20px;padding:28px;position:relative;overflow:hidden;}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent),var(--accent2),transparent);opacity:0.5;}
+.card-title{font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);font-family:var(--font-mono);margin-bottom:22px;}
+.field{margin-bottom:16px;}
+label{display:block;font-size:12px;font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;font-family:var(--font-mono);}
+input,textarea,select{width:100%;background:var(--bg-input);border:1px solid var(--border);border-radius:10px;color:var(--text-primary);font-family:var(--font-title);font-size:14px;padding:11px 14px;transition:border-color 0.2s;outline:none;appearance:none;}
+input:focus,textarea:focus,select:focus{border-color:rgba(108,252,208,0.35);}
+input::placeholder,textarea::placeholder{color:var(--text-muted);}
+textarea{resize:vertical;min-height:80px;}
+select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238888aa' d='M6 8L1 3h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:36px;cursor:pointer;}
+select option{background:#1a1a24;}
+.divider{height:1px;background:var(--border);margin:16px 0;}
+.section-label{font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:0.12em;color:var(--text-muted);text-transform:uppercase;margin-bottom:10px;}
+.pill-row{display:flex;flex-wrap:wrap;gap:6px;}
+.pill{padding:5px 12px;border-radius:100px;border:1px solid var(--border);background:transparent;color:var(--text-secondary);font-size:12px;font-weight:500;cursor:pointer;transition:all 0.15s;user-select:none;}
+.pill:hover{border-color:#33334a;color:var(--text-primary);}
+.pill.active{background:rgba(108,252,208,0.08);border-color:rgba(108,252,208,0.3);color:var(--accent);}
+.btn-generate{width:100%;margin-top:20px;padding:15px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#0d0d0f;border:none;border-radius:12px;font-family:var(--font-title);font-size:15px;font-weight:800;cursor:pointer;transition:opacity 0.2s,transform 0.15s;display:flex;align-items:center;justify-content:center;gap:8px;}
+.btn-generate:hover{opacity:0.9;transform:translateY(-1px);}
+.btn-generate:disabled{opacity:0.5;cursor:not-allowed;transform:none;}
+.spinner{width:16px;height:16px;border:2px solid rgba(13,13,15,0.3);border-top-color:#0d0d0f;border-radius:50%;animation:spin 0.7s linear infinite;display:none;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.output-panel{display:flex;flex-direction:column;gap:14px;}
+.output-empty{background:var(--bg-card);border:1px dashed var(--border);border-radius:20px;padding:60px 28px;text-align:center;color:var(--text-muted);font-size:14px;display:flex;flex-direction:column;align-items:center;gap:14px;}
+.prompt-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;overflow:hidden;animation:fadeUp 0.3s ease both;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+.prompt-header{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;border-bottom:1px solid var(--border);}
+.prompt-tag{font-family:var(--font-mono);font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(108,252,208,0.1);color:var(--accent);}
+.prompt-sub{font-size:12px;color:var(--text-secondary);}
+.prompt-body{padding:18px;font-size:13.5px;line-height:1.8;color:var(--text-primary);white-space:pre-wrap;}
+.prompt-actions{padding:10px 18px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
+.copy-btn{background:var(--bg-input);border:1px solid var(--border);border-radius:8px;color:var(--text-secondary);font-size:12px;font-weight:600;padding:6px 14px;cursor:pointer;transition:all 0.18s;font-family:var(--font-title);}
+.copy-btn:hover{border-color:var(--accent);color:var(--accent);}
+.char-badge{font-family:var(--font-mono);font-size:10px;color:var(--text-muted);}
+footer{position:relative;z-index:1;text-align:center;padding:32px 24px;border-top:1px solid var(--border);color:var(--text-muted);font-size:13px;}
+@media(max-width:700px){.main{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">i <span class="nav-heart">♥</span> prompts</a>
+  <ul class="nav-links">
+    <li><a href="iloveprompts-chatgpt-prompt-generator.html">ChatGPT</a></li>
+    <li><a href="iloveprompts-midjourney-prompt-generator.html">Midjourney</a></li>
+    <li><a href="index.html">By Profession</a></li>
+  </ul>
+</nav>
+<header class="hero">
+  <a href="index.html" class="back-link">← All tools</a>
+  <div class="hero-badge">📹 Pika</div>
+  <h1>Generate Cinematic<br><span class="g">Pika Prompts</span></h1>
+  <p>Generate detailed Pika AI video prompts with camera movements, visual style, and motion effects. Create stunning AI video clips instantly.</p>
+</header>
+<div class="task-nav">
+  <p class="task-label">Task type</p>
+  <div class="task-pills" id="taskPills"><div class="task-pill active" data-value="cinematic scene">🎬 Cinematic</div><div class="task-pill" data-value="product showcase video">📦 Product</div><div class="task-pill" data-value="nature or landscape video">🌿 Nature</div><div class="task-pill" data-value="abstract motion graphics">✨ Abstract</div><div class="task-pill" data-value="character animation">👤 Character</div></div>
+</div>
+<main class="main">
+  <div class="card">
+    <p class="card-title">Your details</p>
+    <div class="field"><label>Scene description</label><textarea data-key="scene" placeholder="e.g. A lone astronaut walking on Mars surface, dust storm in background, dramatic sunset, red sky" style="min-height:90px;"></textarea></div>
+<div class="divider"></div>
+<p class="section-label">Camera movement</p>
+<div class="field"><div class="pill-row pill-group"><div class="pill active" data-value="slow dolly forward">Dolly In</div><div class="pill" data-value="aerial drone shot">Drone</div><div class="pill" data-value="orbit around subject">Orbit</div><div class="pill" data-value="static locked off">Static</div><div class="pill" data-value="handheld shaky">Handheld</div><div class="pill" data-value="tilt up reveal">Tilt Up</div></div></div>
+<p class="section-label">Style</p>
+<div class="field"><div class="pill-row pill-group"><div class="pill active" data-value="photorealistic">Photorealistic</div><div class="pill" data-value="cinematic film">Cinematic</div><div class="pill" data-value="anime style">Anime</div><div class="pill" data-value="3D animated">3D</div></div></div>
+<div class="field"><label>Aspect Ratio</label><select data-key="ratio"><option value="16:9 widescreen">16:9 Widescreen</option><option value="9:16 vertical">9:16 Vertical (TikTok)</option><option value="1:1 square">1:1 Square</option></select></div>
+    <button class="btn-generate" id="generateBtn" onclick="generatePrompts()">
+      <span id="btnIcon">📹</span><span id="btnText">Generate 3 Pika Prompts</span>
+      <div class="spinner" id="spinner"></div>
+    </button>
+  </div>
+  <div class="output-panel" id="outputPanel">
+    <div class="output-empty" id="emptyState">
+      <div style="font-size:40px;opacity:0.3;">📹</div>
+      <span>Fill in your details and click Generate.</span>
+    </div>
+  </div>
+</main>
+<footer><p>© 2025 iloveprompts.org — Free AI Prompt Tools</p></footer>
+<script>
+document.querySelectorAll('#taskPills .task-pill').forEach(p=>p.addEventListener('click',()=>{document.querySelectorAll('#taskPills .task-pill').forEach(x=>x.classList.remove('active'));p.classList.add('active');}));
+document.querySelectorAll('.pill-group').forEach(group=>{group.querySelectorAll('.pill').forEach(p=>p.addEventListener('click',()=>{group.querySelectorAll('.pill').forEach(x=>x.classList.remove('active'));p.classList.add('active');}));});
+function getVal(id){return document.getElementById(id)?.value?.trim()||'';}
+function getActive(sel){return document.querySelector(sel+'.active')?.dataset?.value||document.querySelector(sel+'.active')?.textContent?.trim()||'';}
+function isSafeInput(t){return!['weapon','bomb','child','minor','kill','fraud','hack','malware'].some(w=>t.toLowerCase().includes(w));}
+async function generatePrompts(){
+  const inputs=Array.from(document.querySelectorAll('input[type=text],input[type=number],textarea,select')).map(el=>el.value).join(' ');
+  if(!inputs.trim()){alert('Please fill in the required fields.');return;}
+  if(!isSafeInput(inputs)){alert('This tool is for creative and professional use only.');return;}
+  const task=getActive('#taskPills .task-pill');
+  const btn=document.getElementById('generateBtn');
+  btn.disabled=true;document.getElementById('spinner').style.display='block';document.getElementById('btnIcon').style.display='none';document.getElementById('btnText').textContent='Generating…';
+  
+  // Build context from all visible inputs
+  const allInputs={};
+  document.querySelectorAll('[data-key]').forEach(el=>{allInputs[el.dataset.key]=el.value||el.textContent;});
+  
+  const prompt=`You are a Pika AI video expert. Generate 3 optimized Pika prompts with scene description, camera movement, lighting, visual style, motion keywords, and aspect ratio. Each should produce a distinct, compelling video clip.
+
+Task: ${task}
+User inputs: ${JSON.stringify(allInputs)}
+All field values: ${inputs}
+
+Generate 3 different, high-quality prompts. Vary the approach across all 3.
+Return ONLY valid JSON:
+{"prompts":[{"label":"Version A","angle":"brief approach description","prompt":"full prompt here"},{"label":"Version B","angle":"brief approach description","prompt":"full prompt here"},{"label":"Version C","angle":"brief approach description","prompt":"full prompt here"}]}`;
+
+  try{
+    const res=await fetch('/.netlify/functions/claude',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:2000,messages:[{role:'user',content:prompt}]})});
+    const data=await res.json();
+    const parsed=JSON.parse(data.content[0].text.replace(/```json|```/g,'').trim());
+    const panel=document.getElementById('outputPanel');
+    panel.querySelectorAll('.prompt-card').forEach(el=>el.remove());
+    document.getElementById('emptyState').style.display='none';
+    parsed.prompts.forEach((p,i)=>{
+      const card=document.createElement('div');card.className='prompt-card';card.style.animationDelay=(i*0.1)+'s';
+      card.innerHTML=`<div class="prompt-header"><span class="prompt-tag">${p.label}</span><span class="prompt-sub">${p.angle}</span></div><div class="prompt-body">${escapeHtml(p.prompt)}</div><div class="prompt-actions"><button class="copy-btn" data-text="${escapeAttr(p.prompt)}">Copy</button><span class="char-badge">${p.prompt.length} chars</span></div>`;
+      card.querySelector('.copy-btn').addEventListener('click',async function(){try{await navigator.clipboard.writeText(this.dataset.text);this.textContent='✓';setTimeout(()=>{this.textContent='Copy';},2000);}catch{}});
+      panel.appendChild(card);
+    });
+  }catch(err){console.error(err);alert('Something went wrong. Please try again.');}
+  finally{btn.disabled=false;document.getElementById('spinner').style.display='none';document.getElementById('btnIcon').style.display='inline';document.getElementById('btnText').textContent='Generate 3 Pika Prompts';}
+}
+function escapeHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function escapeAttr(s){return s.replace(/'/g,'&#39;').replace(/"/g,'&quot;');}
+</script>
+</body>
+</html>

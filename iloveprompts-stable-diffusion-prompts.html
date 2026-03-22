@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stable Diffusion Prompt Generator — Free SD Prompts | iloveprompts.org</title>
+<meta name="description" content="Generate optimized Stable Diffusion prompts with negative prompts, samplers, and CFG settings. Free SD prompt generator for AUTOMATIC1111 and ComfyUI.">
+<meta name="keywords" content="stable diffusion prompt generator, SD prompts, stable diffusion prompts free, AUTOMATIC1111 prompts, negative prompt generator">
+<link rel="canonical" href="https://iloveprompts.org/iloveprompts-stable-diffusion-prompts.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d0d0f;--bg-card:#13131a;--bg-input:#1a1a24;--border:#22222e;--accent:#a78bfa;--accent2:#6cfcd0;--text-primary:#f0efff;--text-secondary:#8888aa;--text-muted:#44445a;--font-title:'Bricolage Grotesque',sans-serif;--font-mono:'DM Mono',monospace;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--text-primary);font-family:var(--font-title);font-size:15px;line-height:1.6;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;width:600px;height:600px;background:radial-gradient(circle,rgba(167,139,250,0.07) 0%,transparent 70%);border-radius:50%;top:-200px;right:-100px;pointer-events:none;z-index:0;}
+nav{position:sticky;top:0;z-index:100;background:rgba(13,13,15,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 24px;height:58px;display:flex;align-items:center;}
+.nav-logo{font-family:var(--font-title);font-weight:800;font-size:18px;color:var(--text-primary);text-decoration:none;display:flex;align-items:center;gap:6px;}
+.nav-logo .heart{color:#fc6c8f;}
+.hero{position:relative;z-index:1;padding:56px 24px 40px;max-width:800px;margin:0 auto;text-align:center;}
+.back-link{display:inline-flex;align-items:center;gap:6px;color:var(--text-muted);text-decoration:none;font-size:13px;font-family:var(--font-mono);margin-bottom:20px;}
+.back-link:hover{color:var(--text-secondary);}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(167,139,250,0.1);border:1px solid rgba(167,139,250,0.22);color:var(--accent);font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:20px;font-family:var(--font-mono);}
+.hero h1{font-size:clamp(32px,5vw,52px);font-weight:800;line-height:1.05;letter-spacing:-2px;margin-bottom:14px;}
+.hero h1 .g{background:linear-gradient(135deg,var(--accent) 0%,var(--accent2) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero p{color:var(--text-secondary);font-size:16px;max-width:500px;margin:0 auto;}
+.main{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:0 24px 80px;display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start;}
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:20px;padding:28px;position:relative;overflow:hidden;}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent),var(--accent2),transparent);opacity:0.5;}
+.card-title{font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);font-family:var(--font-mono);margin-bottom:20px;}
+.field{margin-bottom:16px;}
+label{display:block;font-size:12px;font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;font-family:var(--font-mono);}
+input,textarea{width:100%;background:var(--bg-input);border:1px solid var(--border);border-radius:10px;color:var(--text-primary);font-family:var(--font-title);font-size:14px;padding:11px 14px;transition:border-color 0.2s;outline:none;}
+input:focus,textarea:focus{border-color:rgba(167,139,250,0.4);}
+input::placeholder,textarea::placeholder{color:var(--text-muted);}
+textarea{resize:vertical;min-height:80px;}
+.divider{height:1px;background:var(--border);margin:16px 0;}
+.section-label{font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:0.12em;color:var(--text-muted);text-transform:uppercase;margin-bottom:10px;}
+.pill-row{display:flex;flex-wrap:wrap;gap:6px;}
+.pill{padding:5px 12px;border-radius:100px;border:1px solid var(--border);background:transparent;color:var(--text-secondary);font-size:12px;font-weight:500;cursor:pointer;transition:all 0.15s;user-select:none;}
+.pill:hover{border-color:#33334a;color:var(--text-primary);}
+.pill.active{background:rgba(167,139,250,0.1);border-color:rgba(167,139,250,0.35);color:var(--accent);}
+.btn-generate{width:100%;margin-top:20px;padding:15px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#0d0d0f;border:none;border-radius:12px;font-family:var(--font-title);font-size:15px;font-weight:800;cursor:pointer;transition:opacity 0.2s,transform 0.15s;display:flex;align-items:center;justify-content:center;gap:8px;}
+.btn-generate:hover{opacity:0.9;transform:translateY(-1px);}
+.btn-generate:disabled{opacity:0.5;cursor:not-allowed;transform:none;}
+.spinner{width:16px;height:16px;border:2px solid rgba(13,13,15,0.3);border-top-color:#0d0d0f;border-radius:50%;animation:spin 0.7s linear infinite;display:none;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.output-panel{display:flex;flex-direction:column;gap:14px;}
+.output-empty{background:var(--bg-card);border:1px dashed var(--border);border-radius:20px;padding:60px 28px;text-align:center;color:var(--text-muted);font-size:14px;display:flex;flex-direction:column;align-items:center;gap:14px;}
+.prompt-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;overflow:hidden;animation:fadeUp 0.3s ease both;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+.prompt-header{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;border-bottom:1px solid var(--border);}
+.prompt-tag{font-family:var(--font-mono);font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(167,139,250,0.12);color:var(--accent);}
+.prompt-section{padding:14px 18px;border-bottom:1px solid var(--border);}
+.prompt-section:last-of-type{border-bottom:none;}
+.prompt-section-label{font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px;}
+.prompt-section-content{font-size:13px;color:var(--text-primary);line-height:1.7;white-space:pre-wrap;}
+.neg-content{color:#fc6c8f;}
+.params-content{color:var(--accent2);font-family:var(--font-mono);font-size:12px;}
+.prompt-actions{padding:10px 18px;border-top:1px solid var(--border);display:flex;gap:8px;}
+.copy-btn{background:var(--bg-input);border:1px solid var(--border);border-radius:8px;color:var(--text-secondary);font-size:12px;font-weight:600;padding:6px 12px;cursor:pointer;transition:all 0.18s;font-family:var(--font-title);}
+.copy-btn:hover{border-color:var(--accent);color:var(--accent);}
+footer{position:relative;z-index:1;text-align:center;padding:32px 24px;border-top:1px solid var(--border);color:var(--text-muted);font-size:13px;}
+@media(max-width:700px){.main{grid-template-columns:1fr;}}
+
+.ref-upload-wrap{margin-top:16px;border:1.5px dashed var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;cursor:pointer;position:relative;}
+.ref-upload-wrap.has-image{border-color:rgba(167,139,250,0.4);background:rgba(167,139,250,0.04);}
+.ref-upload-inner{display:flex;align-items:center;gap:12px;}
+.ref-upload-icon{font-size:20px;opacity:0.4;}
+.ref-upload-text{font-size:13px;color:var(--text-secondary);}
+.ref-upload-text strong{color:var(--accent);font-weight:600;}
+.ref-preview{width:56px;height:56px;border-radius:8px;object-fit:cover;border:1px solid var(--border);display:none;}
+.ref-remove{font-size:11px;color:var(--text-muted);cursor:pointer;margin-left:auto;padding:4px 8px;border:1px solid var(--border);border-radius:6px;}
+.ref-tip{margin-top:10px;padding:10px 14px;background:rgba(167,139,250,0.06);border:1px solid rgba(167,139,250,0.15);border-radius:8px;font-size:12px;color:var(--text-secondary);line-height:1.5;}
+.ref-tip strong{color:var(--accent);}
+input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;}
+</style>
+</head>
+<body>
+<nav><a href="index.html" class="nav-logo">i <span class="heart">♥</span> prompts</a></nav>
+<header class="hero">
+  <a href="index.html" class="back-link">← All tools</a>
+  <div class="hero-badge">⚡ Stable Diffusion</div>
+  <h1>Stable Diffusion<br><span class="g">Prompt Generator</span></h1>
+  <p>Generate optimized SD prompts with positive prompt, negative prompt, and recommended settings for AUTOMATIC1111 and ComfyUI.</p>
+</header>
+<main class="main">
+  <div class="card">
+    <p class="card-title">Your Image</p>
+    <div class="field"><label>Describe your image</label><textarea id="subject" placeholder="e.g. A warrior woman standing on a cliff at sunset, long red hair flowing in the wind, armor, dramatic sky"></textarea></div>
+    <div class="divider"></div>
+    <p class="section-label">Style</p>
+    <div class="field">
+      <div class="pill-row" id="stylePills">
+        <div class="pill active" data-value="photorealistic">Photorealistic</div>
+        <div class="pill" data-value="digital painting">Digital Art</div>
+        <div class="pill" data-value="anime">Anime</div>
+        <div class="pill" data-value="oil painting">Oil Painting</div>
+        <div class="pill" data-value="concept art">Concept Art</div>
+        <div class="pill" data-value="3D render">3D Render</div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <p class="section-label">Quality Level</p>
+    <div class="field">
+      <div class="pill-row" id="qualityPills">
+        <div class="pill active" data-value="high quality">High Quality</div>
+        <div class="pill" data-value="masterpiece ultra detailed">Masterpiece</div>
+        <div class="pill" data-value="cinematic">Cinematic</div>
+      </div>
+    </div>
+    
+    <div class="field">
+      <span style="font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;display:block;">Reference image (optional)</span>
+      <div class="ref-upload-wrap" id="refWrap">
+        <input type="file" id="refImageInput" accept="image/*" onchange="handleRefImage(this)">
+        <div class="ref-upload-inner">
+          <span class="ref-upload-icon">🖼️</span>
+          <span class="ref-upload-text"><strong>Click to upload</strong> a reference image<br>We'll extract style keywords for your SD prompt</span>
+          <img class="ref-preview" id="refPreview" src="" alt="Reference">
+          <span class="ref-remove" id="refRemove" style="display:none" onclick="removeRef(event)">Remove</span>
+        </div>
+      </div>
+      <div class="ref-tip" id="refTip" style="display:none">
+        <strong>How to use in Stable Diffusion:</strong><br>Use img2img in AUTOMATIC1111 and upload your reference. Set denoising strength to 0.5–0.7. In ComfyUI use the IPAdapter node.
+      </div>
+    </div>
+    <button class="btn-generate" id="generateBtn" onclick="generatePrompts()">
+      <span id="btnIcon">⚡</span><span id="btnText">Generate SD Prompts</span>
+      <div class="spinner" id="spinner"></div>
+    </button>
+  </div>
+  <div class="output-panel" id="outputPanel">
+    <div class="output-empty" id="emptyState"><div style="font-size:40px;opacity:0.3;">⚡</div><span>Describe your image and click Generate.</span></div>
+  </div>
+</main>
+<footer><p>© 2025 iloveprompts.org — Free AI Prompt Tools</p></footer>
+<script>
+const ANTHROPIC_API_KEY='YOUR-API-KEY-HERE';
+[['#stylePills'],['#qualityPills']].forEach(([sel])=>{document.querySelectorAll(sel+' .pill').forEach(p=>p.addEventListener('click',()=>{document.querySelectorAll(sel+' .pill').forEach(x=>x.classList.remove('active'));p.classList.add('active');}));});
+function getVal(id){return document.getElementById(id)?.value?.trim()||'';}
+function getActive(sel){return document.querySelector(sel+'.active')?.dataset?.value||'';}
+function isSafeInput(text){const blocked=['hack','exploit','malware','weapon','bomb','poison','child','minor','underage','kill','murder','fraud','counterfeit'];return!blocked.some(w=>text.toLowerCase().includes(w));}
+async function generatePrompts(){
+  const subject=getVal('subject');
+  if(!subject){alert('Please describe your image.');return;}
+  if(!isSafeInput(subject)){alert('This tool is for creative use only.');return;}
+  const style=getActive('#stylePills .pill'),quality=getActive('#qualityPills .pill');
+  const btn=document.getElementById('generateBtn');
+  btn.disabled=true;document.getElementById('spinner').style.display='block';document.getElementById('btnIcon').style.display='none';document.getElementById('btnText').textContent='Generating…';
+  const prompt=`You are a Stable Diffusion expert. Generate 3 complete SD prompt sets.
+
+Subject: ${subject}
+Style: ${style}
+Quality: ${quality}
+
+For each, provide: positive prompt, negative prompt, and recommended settings (sampler, steps, CFG scale).
+Vary the approach across the 3 sets.
+
+Return ONLY valid JSON:
+{"prompts":[{"label":"Version A","positive":"prompt here","negative":"negative prompt here","settings":"Sampler: DPM++ 2M Karras, Steps: 30, CFG: 7"},{"label":"Version B","positive":"...","negative":"...","settings":"..."},{"label":"Version C","positive":"...","negative":"...","settings":"..."}]}`;
+  try{
+    const res=await fetch('/.netlify/functions/claude',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:2000,messages:[{role:'user',content:window._refImageB64?[
+      {type:'image',source:{type:'base64',media_type:window._refImageType||'image/jpeg',data:window._refImageB64.split(',')[1]}},
+      {type:'text',text:prompt+' Analyze the reference image and incorporate its style into the SD prompts.'}
+    ]:prompt}]})});
+    const data=await res.json();
+    const parsed=JSON.parse(data.content[0].text.replace(/```json|```/g,'').trim());
+    const panel=document.getElementById('outputPanel');
+    panel.querySelectorAll('.prompt-card').forEach(el=>el.remove());
+    document.getElementById('emptyState').style.display='none';
+    parsed.prompts.forEach((p,i)=>{
+      const card=document.createElement('div');card.className='prompt-card';card.style.animationDelay=(i*0.1)+'s';
+      const fullText=`Positive: ${p.positive}\n\nNegative: ${p.negative}\n\nSettings: ${p.settings}`;
+      card.innerHTML=`<div class="prompt-header"><span class="prompt-tag">${p.label}</span></div><div class="prompt-section"><div class="prompt-section-label">Positive Prompt</div><div class="prompt-section-content">${escapeHtml(p.positive)}</div></div><div class="prompt-section"><div class="prompt-section-label">Negative Prompt</div><div class="prompt-section-content neg-content">${escapeHtml(p.negative)}</div></div><div class="prompt-section"><div class="prompt-section-label">Settings</div><div class="prompt-section-content params-content">${escapeHtml(p.settings)}</div></div><div class="prompt-actions"><button class="copy-btn" data-text="${escapeAttr(p.positive)}">Copy positive</button><button class="copy-btn" data-text="${escapeAttr(p.negative)}">Copy negative</button></div>`;
+      card.querySelectorAll('.copy-btn').forEach(b=>b.addEventListener('click',async function(){try{await navigator.clipboard.writeText(this.dataset.text);const orig=this.textContent;this.textContent='✓';setTimeout(()=>{this.textContent=orig;},2000);}catch{}}));
+      panel.appendChild(card);
+    });
+  }catch(err){console.error(err);alert('Something went wrong.');}
+  finally{btn.disabled=false;document.getElementById('spinner').style.display='none';document.getElementById('btnIcon').style.display='inline';document.getElementById('btnText').textContent='Generate SD Prompts';}
+}
+function escapeHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function escapeAttr(s){return s.replace(/'/g,'&#39;').replace(/"/g,'&quot;');}
+
+function handleRefImage(input){
+  if(!input.files||!input.files[0])return;
+  const reader=new FileReader();
+  reader.onload=function(e){
+    document.getElementById('refPreview').src=e.target.result;
+    document.getElementById('refPreview').style.display='block';
+    document.getElementById('refRemove').style.display='inline';
+    document.getElementById('refWrap').classList.add('has-image');
+    document.getElementById('refTip').style.display='block';
+    window._refImageB64=e.target.result;
+    window._refImageType=input.files[0].type;
+  };
+  reader.readAsDataURL(input.files[0]);
+}
+function removeRef(e){
+  e.stopPropagation();
+  document.getElementById('refPreview').style.display='none';
+  document.getElementById('refRemove').style.display='none';
+  document.getElementById('refWrap').classList.remove('has-image');
+  document.getElementById('refTip').style.display='none';
+  document.getElementById('refImageInput').value='';
+  window._refImageB64=null;
+}
+
+</script>
+</body>
+</html>

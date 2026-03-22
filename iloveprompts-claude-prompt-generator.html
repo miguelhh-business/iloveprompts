@@ -1,0 +1,35 @@
+// iloveprompts.org — Central Configuration
+const CONFIG = {
+
+  // API goes through secure Netlify proxy — key is never exposed
+  ANTHROPIC_API_KEY: 'PROXY', // do not change this
+
+  // ─── GOOGLE ADSENSE ──────────────────────────────────────────
+  ADSENSE_ID: 'YOUR-ADSENSE-ID-HERE',
+
+  // ─── AFFILIATE LINKS ─────────────────────────────────────────
+  AFFILIATE_CHATGPT_PLUS: 'https://chat.openai.com',
+  AFFILIATE_JASPER:       'https://jasper.ai',
+  AFFILIATE_GRAMMARLY:    'https://grammarly.com',
+  AFFILIATE_MIDJOURNEY:   'https://midjourney.com',
+  AFFILIATE_CANVA:        'https://canva.com',
+  AFFILIATE_ADOBE:        'https://adobe.com',
+  AFFILIATE_SUNO:         'https://suno.com',
+  AFFILIATE_RUNWAY:       'https://runwayml.com',
+  AFFILIATE_EPIDEMIC:     'https://epidemicsound.com',
+  AFFILIATE_COPY_AI:      'https://copy.ai',
+
+  BANNERS: {
+    chatgpt:      { text: 'Get better results with ChatGPT Plus — GPT-4 with plugins', cta: 'Try ChatGPT Plus', url: 'AFFILIATE_CHATGPT_PLUS' },
+    claude:       { text: 'Try Claude Pro for longer context and priority access', cta: 'Try Claude Pro', url: 'https://claude.ai/upgrade' },
+    midjourney:   { text: 'Ready to create? Start your Midjourney subscription', cta: 'Try Midjourney', url: 'AFFILIATE_MIDJOURNEY' },
+    dalle:        { text: 'Generate images directly in ChatGPT with Plus', cta: 'Try ChatGPT Plus', url: 'AFFILIATE_CHATGPT_PLUS' },
+    stable_diff:  { text: 'Need a powerful image editor? Try Adobe Firefly', cta: 'Try Adobe', url: 'AFFILIATE_ADOBE' },
+    suno:         { text: 'Upgrade Suno for unlimited song generation', cta: 'Try Suno Pro', url: 'AFFILIATE_SUNO' },
+    runway:       { text: 'Unlock longer videos and more credits on Runway', cta: 'Try Runway Pro', url: 'AFFILIATE_RUNWAY' },
+    writing:      { text: 'Polish your writing with Grammarly before publishing', cta: 'Try Grammarly Free', url: 'AFFILIATE_GRAMMARLY' },
+    marketing:    { text: 'Scale your content with Jasper AI', cta: 'Try Jasper', url: 'AFFILIATE_JASPER' },
+    creators:     { text: 'Add professional music to your videos — Epidemic Sound', cta: 'Try Epidemic Sound', url: 'AFFILIATE_EPIDEMIC' },
+    design:       { text: 'Design anything with Canva Pro', cta: 'Try Canva Pro', url: 'AFFILIATE_CANVA' },
+  }
+};

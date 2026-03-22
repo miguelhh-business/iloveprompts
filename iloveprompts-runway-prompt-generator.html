@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Runway Prompt Generator — Free AI Video Prompt Builder | iloveprompts.org</title>
+  <meta name="description" content="Generate cinematic Runway Gen-3 prompts with camera movements, lighting, and visual style. Free Runway ML prompt generator for AI video creation.">
+  <meta name="keywords" content="Runway prompt generator, Runway Gen-3 prompts, AI video prompts, Runway ML prompts free, cinematic AI video prompt">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://iloveprompts.org/iloveprompts-runway-prompt-generator.html">
+  <meta property="og:title" content="Runway Prompt Generator — Free AI Video Prompts">
+  <meta property="og:description" content="Generate cinematic Runway Gen-3 prompts with camera movements, lighting, and visual style. Free Runway ML prompt generator for AI video creation.">
+  <meta property="og:url" content="https://iloveprompts.org/iloveprompts-runway-prompt-generator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="iloveprompts.org">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Runway Prompt Generator — Free AI Video Prompts">
+  <meta name="twitter:description" content="Generate cinematic Runway Gen-3 prompts with camera movements, lighting, and visual style. Free Runway ML prompt generator for AI video creation.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Runway Prompt Generator — Free AI Video Prompts",
+    "description": "Generate cinematic Runway Gen-3 prompts with camera movements, lighting, and visual style. Free Runway ML prompt generator for AI video creation.",
+    "url": "https://iloveprompts.org/iloveprompts-runway-prompt-generator.html",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "iloveprompts.org",
+      "url": "https://iloveprompts.org"
+    }
+  }
+  </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d0d0f;--bg-card:#13131a;--bg-input:#1a1a24;--border:#22222e;--border-hover:#33334a;--accent:#fcb86c;--accent2:#fc6c8f;--accent3:#7c6cfc;--text-primary:#f0efff;--text-secondary:#8888aa;--text-muted:#44445a;--font-title:'Bricolage Grotesque',sans-serif;--font-mono:'DM Mono',monospace;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--text-primary);font-family:var(--font-title);font-size:15px;line-height:1.6;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;width:700px;height:700px;background:radial-gradient(circle,rgba(252,184,108,0.06) 0%,transparent 70%);border-radius:50%;top:-200px;left:-100px;pointer-events:none;z-index:0;}
+body::after{content:'';position:fixed;width:500px;height:500px;background:radial-gradient(circle,rgba(252,108,143,0.05) 0%,transparent 70%);border-radius:50%;bottom:-150px;right:-100px;pointer-events:none;z-index:0;}
+
+nav{position:sticky;top:0;z-index:100;background:rgba(13,13,15,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 24px;height:58px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{font-family:var(--font-title);font-weight:800;font-size:18px;color:var(--text-primary);text-decoration:none;display:flex;align-items:center;gap:6px;}
+.nav-logo .heart{color:var(--accent2);}
+.nav-links{display:flex;gap:4px;list-style:none;}
+.nav-links a{color:var(--text-secondary);text-decoration:none;font-size:13px;font-weight:500;padding:5px 12px;border-radius:8px;transition:all 0.2s;}
+.nav-links a:hover{background:var(--bg-input);color:var(--text-primary);}
+.nav-links a.active{background:rgba(252,184,108,0.1);color:var(--accent);}
+
+.hero{position:relative;z-index:1;padding:56px 24px 40px;max-width:800px;margin:0 auto;text-align:center;}
+.back-link{display:inline-flex;align-items:center;gap:6px;color:var(--text-muted);text-decoration:none;font-size:13px;font-family:var(--font-mono);margin-bottom:20px;transition:color 0.2s;}
+.back-link:hover{color:var(--text-secondary);}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(252,184,108,0.1);border:1px solid rgba(252,184,108,0.22);color:var(--accent);font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:20px;font-family:var(--font-mono);}
+.hero h1{font-size:clamp(32px,5vw,52px);font-weight:800;line-height:1.05;letter-spacing:-2px;margin-bottom:14px;}
+.hero h1 .g{background:linear-gradient(135deg,var(--accent) 0%,var(--accent2) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero p{color:var(--text-secondary);font-size:16px;max-width:500px;margin:0 auto;}
+
+.main{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:0 24px 80px;display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start;}
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:20px;padding:28px;position:relative;overflow:hidden;}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent),var(--accent2),transparent);opacity:0.5;}
+.card-title{font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);font-family:var(--font-mono);margin-bottom:24px;}
+
+.field{margin-bottom:16px;}
+label{display:block;font-size:12px;font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;font-family:var(--font-mono);}
+input,textarea{width:100%;background:var(--bg-input);border:1px solid var(--border);border-radius:10px;color:var(--text-primary);font-family:var(--font-title);font-size:14px;padding:11px 14px;transition:border-color 0.2s;outline:none;}
+input:focus,textarea:focus{border-color:rgba(252,184,108,0.35);}
+input::placeholder,textarea::placeholder{color:var(--text-muted);}
+textarea{resize:vertical;min-height:70px;}
+
+.divider{height:1px;background:var(--border);margin:18px 0;}
+.section-label{font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:0.12em;color:var(--text-muted);text-transform:uppercase;margin-bottom:12px;}
+
+.pill-row{display:flex;flex-wrap:wrap;gap:6px;}
+.pill{padding:5px 12px;border-radius:100px;border:1px solid var(--border);background:transparent;color:var(--text-secondary);font-size:12px;font-weight:500;cursor:pointer;transition:all 0.15s;user-select:none;}
+.pill:hover{border-color:var(--border-hover);color:var(--text-primary);}
+.pill.active{background:rgba(252,184,108,0.1);border-color:rgba(252,184,108,0.35);color:var(--accent);}
+
+.btn-generate{width:100%;margin-top:20px;padding:15px;background:linear-gradient(135deg,var(--accent) 0%,var(--accent2) 100%);color:#0d0d0f;border:none;border-radius:12px;font-family:var(--font-title);font-size:15px;font-weight:800;cursor:pointer;transition:opacity 0.2s,transform 0.15s,box-shadow 0.2s;display:flex;align-items:center;justify-content:center;gap:8px;}
+.btn-generate:hover{opacity:0.9;transform:translateY(-1px);box-shadow:0 8px 32px rgba(252,184,108,0.2);}
+.btn-generate:disabled{opacity:0.5;cursor:not-allowed;transform:none;box-shadow:none;}
+.spinner{width:16px;height:16px;border:2px solid rgba(13,13,15,0.3);border-top-color:#0d0d0f;border-radius:50%;animation:spin 0.7s linear infinite;display:none;}
+@keyframes spin{to{transform:rotate(360deg);}}
+
+.output-panel{display:flex;flex-direction:column;gap:14px;}
+.output-empty{background:var(--bg-card);border:1px dashed var(--border);border-radius:20px;padding:60px 28px;text-align:center;color:var(--text-muted);font-size:14px;display:flex;flex-direction:column;align-items:center;gap:14px;}
+
+.prompt-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;overflow:hidden;animation:fadeUp 0.3s ease both;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+.prompt-header{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;border-bottom:1px solid var(--border);}
+.prompt-tag{font-family:var(--font-mono);font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(252,184,108,0.12);color:var(--accent);}
+.prompt-style{font-size:12px;color:var(--text-secondary);}
+.prompt-body{padding:18px;font-size:13.5px;line-height:1.8;color:var(--text-primary);white-space:pre-wrap;}
+.camera-bar{padding:10px 18px;border-top:1px solid var(--border);background:rgba(252,184,108,0.05);display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.camera-label{font-family:var(--font-mono);font-size:10px;color:var(--text-muted);}
+.camera-tag{font-family:var(--font-mono);font-size:10px;font-weight:600;color:var(--accent);background:rgba(252,184,108,0.1);padding:2px 8px;border-radius:4px;}
+.prompt-actions{padding:10px 18px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
+.copy-btn{background:var(--bg-input);border:1px solid var(--border);border-radius:8px;color:var(--text-secondary);font-size:12px;font-weight:600;padding:6px 14px;cursor:pointer;transition:all 0.18s;display:flex;align-items:center;gap:6px;font-family:var(--font-title);}
+.copy-btn:hover{border-color:var(--accent);color:var(--accent);}
+.copy-btn.copied{border-color:var(--accent);color:var(--accent);}
+.char-badge{font-family:var(--font-mono);font-size:10px;color:var(--text-muted);}
+
+footer{position:relative;z-index:1;text-align:center;padding:32px 24px;border-top:1px solid var(--border);color:var(--text-muted);font-size:13px;}
+footer a{color:var(--text-muted);text-decoration:none;}
+@media(max-width:700px){.main{grid-template-columns:1fr;}.nav-links{display:none;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">i <span class="heart">♥</span> prompts</a>
+  <ul class="nav-links">
+    <li><a href="iloveprompts-chatgpt-prompt-generator.html">ChatGPT</a></li>
+    <li><a href="iloveprompts-midjourney-prompt-generator.html">Midjourney</a></li>
+    <li><a href="iloveprompts-suno-prompt-generator.html">Suno</a></li>
+    <li><a href="iloveprompts-runway-prompt-generator.html" class="active">Runway</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <a href="index.html" class="back-link">← All tools</a>
+  <div class="hero-badge">🎬 AI Video Generation</div>
+  <h1>Generate <span class="g">Cinematic</span><br>Runway Prompts</h1>
+  <p>Describe your shot. We'll engineer a complete Runway Gen-3 prompt with subject, camera movement, lighting, and cinematic style.</p>
+</header>
+
+<main class="main">
+  <div class="card">
+    <p class="card-title">Your Video Shot</p>
+
+    <div class="field">
+      <label>What happens in the shot?</label>
+      <textarea id="subject" placeholder="e.g. A lone astronaut walks slowly across a red desert at sunrise, dust swirling around their feet"></textarea>
+    </div>
+
+    <div class="divider"></div>
+    <p class="section-label">Camera Movement</p>
+    <div class="field">
+      <div class="pill-row" id="cameraPills">
+        <div class="pill active" data-value="slow dolly forward">Dolly in</div>
+        <div class="pill" data-value="slow dolly backward">Dolly out</div>
+        <div class="pill" data-value="drone aerial shot pulling back">Aerial pullback</div>
+        <div class="pill" data-value="static locked shot">Static</div>
+        <div class="pill" data-value="slow pan left to right">Pan</div>
+        <div class="pill" data-value="handheld shaky cam">Handheld</div>
+        <div class="pill" data-value="orbit around subject">Orbit</div>
+        <div class="pill" data-value="slow tilt up">Tilt up</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <p class="section-label">Visual Style</p>
+    <div class="field">
+      <div class="pill-row" id="stylePills">
+        <div class="pill active" data-value="cinematic film 35mm">Cinematic</div>
+        <div class="pill" data-value="documentary realism">Documentary</div>
+        <div class="pill" data-value="hyperrealistic 8K">Hyperrealistic</div>
+        <div class="pill" data-value="anime animated">Anime</div>
+        <div class="pill" data-value="noir black and white">Noir</div>
+        <div class="pill" data-value="dreamlike surreal">Surreal</div>
+        <div class="pill" data-value="vintage 16mm film grain">Vintage</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <p class="section-label">Lighting</p>
+    <div class="field">
+      <div class="pill-row" id="lightingPills">
+        <div class="pill active" data-value="golden hour warm sunlight">Golden hour</div>
+        <div class="pill" data-value="blue hour twilight">Blue hour</div>
+        <div class="pill" data-value="dramatic high contrast shadows">Dramatic</div>
+        <div class="pill" data-value="soft overcast diffused light">Soft</div>
+        <div class="pill" data-value="neon lights city night">Neon night</div>
+        <div class="pill" data-value="moonlight ethereal glow">Moonlight</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <p class="section-label">Duration / Shot Type</p>
+    <div class="field">
+      <div class="pill-row" id="shotPills">
+        <div class="pill" data-value="extreme close-up">Extreme CU</div>
+        <div class="pill" data-value="close-up">Close-up</div>
+        <div class="pill active" data-value="medium shot">Medium</div>
+        <div class="pill" data-value="wide establishing shot">Wide</div>
+        <div class="pill" data-value="extreme wide aerial">Aerial wide</div>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Film Reference <span style="color:var(--text-muted);font-size:11px">(optional)</span></label>
+      <input type="text" id="reference" placeholder="e.g. in the style of Denis Villeneuve, Blade Runner 2049, or Wes Anderson">
+    </div>
+
+    <button class="btn-generate" id="generateBtn" onclick="generatePrompts()">
+      <span id="btnIcon">🎬</span>
+      <span id="btnText">Generate 3 Runway Prompts</span>
+      <div class="spinner" id="spinner"></div>
+    </button>
+  </div>
+
+  <div class="output-panel" id="outputPanel">
+    <div class="output-empty" id="emptyState">
+      <div style="font-size:40px;opacity:0.3;">🎬</div>
+      <span>Describe your shot and click Generate.<br>You'll get 3 cinematic Runway-ready prompts.</span>
+    </div>
+  </div>
+</main>
+
+<footer><p>© 2025 iloveprompts.org — Free AI Prompt Tools &nbsp;·&nbsp; <a href="#">Privacy</a> &nbsp;·&nbsp; <a href="#">Terms</a></p></footer>
+
+<script>
+const ANTHROPIC_API_KEY='YOUR-API-KEY-HERE';
+
+[['#cameraPills'],['#stylePills'],['#lightingPills'],['#shotPills']].forEach(([sel])=>{
+  document.querySelectorAll(sel+' .pill').forEach(p=>p.addEventListener('click',()=>{
+    document.querySelectorAll(sel+' .pill').forEach(x=>x.classList.remove('active'));p.classList.add('active');
+  }));
+});
+
+function getVal(id){return document.getElementById(id)?.value?.trim()||'';}
+function getActive(sel){return document.querySelector(sel+'.active')?.dataset?.value||'';}
+
+
+function isSafeInput(text) {
+  const blocked = [
+    'hack','exploit','malware','virus','phishing','ddos','ransomware',
+    'bomb','weapon','explosive','poison','drug synthesis','meth','cocaine manufacture',
+    'child','minor','underage','lolita',
+    'kill','murder','assassinate','shoot','stab',
+    'fraud','scam','fake id','counterfeit','money laundering',
+    'bypass security','crack password','sql injection','zero-day'
+  ];
+  const lower = text.toLowerCase();
+  return !blocked.some(word => lower.includes(word));
+}
+
+function showSafetyWarning() {
+  const existing = document.getElementById('safety-warning');
+  if (existing) return;
+  const warn = document.createElement('div');
+  warn.id = 'safety-warning';
+  warn.style.cssText = 'position:fixed;top:70px;left:50%;transform:translateX(-50%);background:#1a0a0a;border:1px solid rgba(252,108,143,0.4);color:#fc6c8f;padding:12px 20px;border-radius:10px;font-size:13px;z-index:9999;max-width:400px;text-align:center;font-family:var(--font-title,sans-serif);';
+  warn.textContent = 'This tool is for creative and professional use only. We cannot process this request.';
+  document.body.appendChild(warn);
+  setTimeout(() => warn.remove(), 4000);
+}
+async function generatePrompts(){
+  const subject=getVal('subject'),reference=getVal('reference');
+  const camera=getActive('#cameraPills .pill'),style=getActive('#stylePills .pill'),lighting=getActive('#lightingPills .pill'),shot=getActive('#shotPills .pill');
+  if(!subject){alert('Please describe what happens in your shot.');return;}
+
+  const btn=document.getElementById('generateBtn');
+  btn.disabled=true;document.getElementById('spinner').style.display='block';document.getElementById('btnIcon').style.display='none';document.getElementById('btnText').textContent='Directing your shot…';
+
+  // Safety check
+  const allInputs = document.querySelectorAll('input, textarea');
+  const inputText = Array.from(allInputs).map(el => el.value).join(' ');
+  if (!isSafeInput(inputText)) {
+    showSafetyWarning();
+    btn.disabled=false;
+    document.getElementById('spinner').style.display='none';
+    document.getElementById('btnIcon').style.display='inline';
+    return;
+  }
+  const prompt=`You are an expert Runway Gen-3 prompt engineer and film director. Generate exactly 3 video prompts.
+
+Shot description: ${subject}
+Camera movement: ${camera}
+Visual style: ${style}
+Lighting: ${lighting}
+Shot type: ${shot}
+Film reference: ${reference||'none'}
+
+For each prompt:
+- Write a single detailed paragraph (40-80 words) describing the complete shot
+- Start with the subject/action, then camera, then visual details, then atmosphere
+- Be specific: include texture, color grading, lens type, depth of field, particle effects if relevant
+- Each prompt should produce a noticeably different video — vary the emphasis
+- List 3-4 specific camera/technical tags separately
+
+Prompt 1: Faithful to specs — cinematic and precise
+Prompt 2: More experimental — push the visual style further
+Prompt 3: Focus on atmosphere and emotion over technical specs
+
+Return ONLY valid JSON, no markdown, no backticks:
+{"prompts":[{"label":"Cinematic","style":"Description of approach","prompt":"full runway prompt paragraph","camera_tags":["tag1","tag2","tag3"]},{"label":"Experimental","style":"Description of approach","prompt":"full runway prompt paragraph","camera_tags":["tag1","tag2","tag3"]},{"label":"Atmospheric","style":"Description of approach","prompt":"full runway prompt paragraph","camera_tags":["tag1","tag2","tag3"]}]}`;
+
+  try{
+    const res=await fetch('/.netlify/functions/claude',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:2000,messages:[{role:'user',content:prompt}]})});
+    const data=await res.json();
+    const clean=data.content[0].text.replace(/```json|```/g,'').trim();
+    const parsed=JSON.parse(clean);
+    renderPrompts(parsed.prompts);
+  }catch(err){console.error(err);alert('Something went wrong. Please check your API key.');}
+  finally{btn.disabled=false;document.getElementById('spinner').style.display='none';document.getElementById('btnIcon').style.display='inline';document.getElementById('btnText').textContent='Generate 3 Runway Prompts';}
+}
+
+function renderPrompts(prompts){
+  const panel=document.getElementById('outputPanel');
+  panel.querySelectorAll('.prompt-card').forEach(el=>el.remove());
+  document.getElementById('emptyState').style.display='none';
+
+  prompts.forEach((p,i)=>{
+    const card=document.createElement('div');
+    card.className='prompt-card';
+    card.style.animationDelay=(i*0.1)+'s';
+    card.innerHTML=`
+      <div class="prompt-header">
+        <span class="prompt-tag">${p.label}</span>
+        <span class="prompt-style">${p.style}</span>
+      </div>
+      <div class="prompt-body">${escapeHtml(p.prompt)}</div>
+      ${p.camera_tags?.length?`<div class="camera-bar"><span class="camera-label">Technical:</span>${p.camera_tags.map(t=>`<span class="camera-tag">${t}</span>`).join('')}</div>`:''}
+      <div class="prompt-actions">
+        <button class="copy-btn" data-text="${escapeAttr(p.prompt)}">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="1" y="4" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.2"/><path d="M4 4V3a1 1 0 011-1h5a1 1 0 011 1v5a1 1 0 01-1 1H9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          Copy prompt
+        </button>
+        <span class="char-badge">${p.prompt.length} chars</span>
+      </div>`;
+    card.querySelector('.copy-btn').addEventListener('click',async function(){
+      try{await navigator.clipboard.writeText(this.dataset.text);this.textContent='✓ Copied!';this.classList.add('copied');setTimeout(()=>{this.innerHTML='<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="1" y="4" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.2"/><path d="M4 4V3a1 1 0 011-1h5a1 1 0 011 1v5a1 1 0 01-1 1H9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg> Copy prompt';this.classList.remove('copied');},2000);}
+      catch{alert('Please copy manually.');}
+    });
+    panel.appendChild(card);
+  });
+}
+
+function escapeHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function escapeAttr(s){return s.replace(/'/g,'&#39;').replace(/"/g,'&quot;');}
+</script>
+</body>
+</html>

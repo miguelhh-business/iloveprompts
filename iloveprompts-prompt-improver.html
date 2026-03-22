@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AI Prompt Improver — Make Any Prompt 10x Better | iloveprompts.org</title>
+  <meta name="description" content="Paste any weak AI prompt and get an optimized version with a quality score and improvement analysis. Free prompt optimizer for ChatGPT, Midjourney, Claude, and more.">
+  <meta name="keywords" content="prompt improver, improve AI prompt, prompt optimizer, better ChatGPT prompts, optimize prompts AI">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://iloveprompts.org/iloveprompts-prompt-improver.html">
+  <meta property="og:title" content="AI Prompt Improver — Optimize Any Prompt Instantly">
+  <meta property="og:description" content="Paste any weak AI prompt and get an optimized version with a quality score and improvement analysis. Free prompt optimizer for ChatGPT, Midjourney, Claude, and more.">
+  <meta property="og:url" content="https://iloveprompts.org/iloveprompts-prompt-improver.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="iloveprompts.org">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Prompt Improver — Optimize Any Prompt Instantly">
+  <meta name="twitter:description" content="Paste any weak AI prompt and get an optimized version with a quality score and improvement analysis. Free prompt optimizer for ChatGPT, Midjourney, Claude, and more.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "AI Prompt Improver — Optimize Any Prompt Instantly",
+    "description": "Paste any weak AI prompt and get an optimized version with a quality score and improvement analysis. Free prompt optimizer for ChatGPT, Midjourney, Claude, and more.",
+    "url": "https://iloveprompts.org/iloveprompts-prompt-improver.html",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "iloveprompts.org",
+      "url": "https://iloveprompts.org"
+    }
+  }
+  </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,700;12..96,800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d0d0f;--bg-card:#13131a;--bg-input:#1a1a24;--border:#22222e;--border-hover:#33334a;--accent:#6cfcd0;--accent2:#7c6cfc;--accent3:#fc6c8f;--text-primary:#f0efff;--text-secondary:#8888aa;--text-muted:#44445a;--font-title:'Bricolage Grotesque',sans-serif;--font-mono:'DM Mono',monospace;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--text-primary);font-family:var(--font-title);font-size:15px;line-height:1.6;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;width:600px;height:600px;background:radial-gradient(circle,rgba(108,252,208,0.07) 0%,transparent 70%);border-radius:50%;top:-200px;right:-100px;pointer-events:none;z-index:0;}
+body::after{content:'';position:fixed;width:500px;height:500px;background:radial-gradient(circle,rgba(124,108,252,0.05) 0%,transparent 70%);border-radius:50%;bottom:-150px;left:-100px;pointer-events:none;z-index:0;}
+nav{position:sticky;top:0;z-index:100;background:rgba(13,13,15,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 24px;height:58px;display:flex;align-items:center;}
+.nav-logo{font-family:var(--font-title);font-weight:800;font-size:18px;color:var(--text-primary);text-decoration:none;display:flex;align-items:center;gap:6px;}
+.nav-logo .heart{color:var(--accent3);}
+.hero{position:relative;z-index:1;padding:56px 24px 40px;max-width:760px;margin:0 auto;text-align:center;}
+.back-link{display:inline-flex;align-items:center;gap:6px;color:var(--text-muted);text-decoration:none;font-size:13px;font-family:var(--font-mono);margin-bottom:20px;transition:color 0.2s;}
+.back-link:hover{color:var(--text-secondary);}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(108,252,208,0.08);border:1px solid rgba(108,252,208,0.2);color:var(--accent);font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:20px;font-family:var(--font-mono);}
+.hero h1{font-size:clamp(32px,5vw,52px);font-weight:800;line-height:1.05;letter-spacing:-2px;margin-bottom:14px;}
+.hero h1 .g{background:linear-gradient(135deg,var(--accent) 0%,var(--accent2) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero p{color:var(--text-secondary);font-size:16px;max-width:500px;margin:0 auto;}
+.main{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:0 24px 80px;}
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:20px;padding:28px;position:relative;overflow:hidden;margin-bottom:20px;}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent),var(--accent2),transparent);opacity:0.5;}
+.card-title{font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);font-family:var(--font-mono);margin-bottom:18px;}
+.field{margin-bottom:16px;}
+label{display:block;font-size:12px;font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;font-family:var(--font-mono);}
+textarea,select{width:100%;background:var(--bg-input);border:1px solid var(--border);border-radius:10px;color:var(--text-primary);font-family:var(--font-title);font-size:14px;padding:11px 14px;transition:border-color 0.2s;outline:none;appearance:none;}
+textarea{resize:vertical;min-height:120px;}
+textarea:focus,select:focus{border-color:rgba(108,252,208,0.35);}
+textarea::placeholder{color:var(--text-muted);}
+select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238888aa' d='M6 8L1 3h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:36px;cursor:pointer;}
+select option{background:#1a1a24;}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.btn-generate{width:100%;padding:15px;background:linear-gradient(135deg,var(--accent) 0%,var(--accent2) 100%);color:#0d0d0f;border:none;border-radius:12px;font-family:var(--font-title);font-size:15px;font-weight:800;cursor:pointer;transition:opacity 0.2s,transform 0.15s,box-shadow 0.2s;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:4px;}
+.btn-generate:hover{opacity:0.9;transform:translateY(-1px);box-shadow:0 8px 32px rgba(108,252,208,0.2);}
+.btn-generate:disabled{opacity:0.5;cursor:not-allowed;transform:none;box-shadow:none;}
+.spinner{width:16px;height:16px;border:2px solid rgba(13,13,15,0.3);border-top-color:#0d0d0f;border-radius:50%;animation:spin 0.7s linear infinite;display:none;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.result-wrap{display:none;}
+.score-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;}
+.score-box{background:var(--bg-input);border-radius:12px;padding:14px;text-align:center;}
+.score-lbl{font-family:var(--font-mono);font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px;}
+.score-num{font-size:28px;font-weight:800;letter-spacing:-1px;}
+.score-before{color:var(--accent3);}
+.score-after{color:var(--accent);}
+.improvements-list{margin-bottom:20px;}
+.imp-title{font-family:var(--font-mono);font-size:11px;font-weight:700;letter-spacing:0.1em;color:var(--text-muted);text-transform:uppercase;margin-bottom:10px;}
+.imp-item{display:flex;align-items:flex-start;gap:10px;padding:9px 12px;background:rgba(108,252,208,0.04);border:1px solid rgba(108,252,208,0.1);border-radius:8px;margin-bottom:6px;font-size:13px;color:var(--text-secondary);line-height:1.5;}
+.imp-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;margin-top:6px;}
+.improved-box{background:var(--bg-input);border:1px solid rgba(108,252,208,0.2);border-radius:12px;padding:20px;font-size:14px;line-height:1.85;color:var(--text-primary);white-space:pre-wrap;margin-bottom:14px;}
+.copy-improved{background:rgba(108,252,208,0.08);border:1px solid rgba(108,252,208,0.2);border-radius:10px;color:var(--accent);font-size:13px;font-weight:700;padding:10px 20px;cursor:pointer;transition:all 0.18s;font-family:var(--font-title);}
+.copy-improved:hover{background:rgba(108,252,208,0.14);}
+footer{position:relative;z-index:1;text-align:center;padding:32px 24px;border-top:1px solid var(--border);color:var(--text-muted);font-size:13px;}
+@media(max-width:600px){.two-col{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<nav><a href="index.html" class="nav-logo">i <span class="heart">♥</span> prompts</a></nav>
+<header class="hero">
+  <a href="index.html" class="back-link">← All tools</a>
+  <div class="hero-badge">✨ AI-Powered</div>
+  <h1>Make Any Prompt<br><span class="g">10x Better</span></h1>
+  <p>Paste any weak prompt. We'll score it, explain every problem, and return an optimized version ready to use.</p>
+</header>
+<main class="main">
+  <div class="card">
+    <p class="card-title">Your Prompt</p>
+    <div class="field">
+      <label>Paste your original prompt</label>
+      <textarea id="originalPrompt" placeholder="e.g. write me a blog post about marketing&#10;&#10;Or: photorealistic cat&#10;&#10;Or: make my code better"></textarea>
+    </div>
+    <div class="two-col">
+      <div class="field">
+        <label>Target AI Tool</label>
+        <select id="aiTool">
+          <option>ChatGPT</option><option>Claude</option><option>Midjourney</option>
+          <option>Stable Diffusion</option><option>DALL·E</option><option>Runway</option>
+          <option>Suno</option><option value="any AI">Any AI</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Improve For</label>
+        <select id="focus">
+          <option value="overall quality">Overall quality</option>
+          <option value="specificity and detail">More specific</option>
+          <option value="structure and clarity">Better structure</option>
+          <option value="professional tone">More professional</option>
+          <option value="creative impact">More creative</option>
+        </select>
+      </div>
+    </div>
+    <button class="btn-generate" id="generateBtn" onclick="improvePrompt()">
+      <span id="btnIcon">✨</span>
+      <span id="btnText">Improve My Prompt</span>
+      <div class="spinner" id="spinner"></div>
+    </button>
+  </div>
+
+  <div class="result-wrap" id="resultWrap">
+    <div class="card">
+      <p class="card-title">Score & Analysis</p>
+      <div class="score-row">
+        <div class="score-box"><div class="score-lbl">Original score</div><div class="score-num score-before" id="scoreBefore">—</div></div>
+        <div class="score-box"><div class="score-lbl">Improved score</div><div class="score-num score-after" id="scoreAfter">—</div></div>
+      </div>
+      <div class="improvements-list">
+        <p class="imp-title">What we fixed</p>
+        <div id="impItems"></div>
+      </div>
+    </div>
+    <div class="card">
+      <p class="card-title">Optimized Prompt</p>
+      <div class="improved-box" id="improvedBox"></div>
+      <button class="copy-improved" id="copyBtn">Copy improved prompt</button>
+    </div>
+  </div>
+</main>
+<footer><p>© 2025 iloveprompts.org — Free AI Prompt Tools</p></footer>
+<script>
+const ANTHROPIC_API_KEY='YOUR-API-KEY-HERE';
+function getVal(id){return document.getElementById(id)?.value?.trim()||'';}
+
+function isSafeInput(text) {
+  const blocked = [
+    'hack','exploit','malware','virus','phishing','ddos','ransomware',
+    'bomb','weapon','explosive','poison','drug synthesis','meth','cocaine manufacture',
+    'child','minor','underage','lolita',
+    'kill','murder','assassinate','shoot','stab',
+    'fraud','scam','fake id','counterfeit','money laundering',
+    'bypass security','crack password','sql injection','zero-day'
+  ];
+  const lower = text.toLowerCase();
+  return !blocked.some(word => lower.includes(word));
+}
+
+function showSafetyWarning() {
+  const existing = document.getElementById('safety-warning');
+  if (existing) return;
+  const warn = document.createElement('div');
+  warn.id = 'safety-warning';
+  warn.style.cssText = 'position:fixed;top:70px;left:50%;transform:translateX(-50%);background:#1a0a0a;border:1px solid rgba(252,108,143,0.4);color:#fc6c8f;padding:12px 20px;border-radius:10px;font-size:13px;z-index:9999;max-width:400px;text-align:center;font-family:var(--font-title,sans-serif);';
+  warn.textContent = 'This tool is for creative and professional use only. We cannot process this request.';
+  document.body.appendChild(warn);
+  setTimeout(() => warn.remove(), 4000);
+}
+async function improvePrompt(){
+  const original=getVal('originalPrompt'),aiTool=getVal('aiTool'),focus=getVal('focus');
+  if(!original){alert('Please paste a prompt.');return;}
+  const btn=document.getElementById('generateBtn');
+  btn.disabled=true;document.getElementById('spinner').style.display='block';document.getElementById('btnIcon').style.display='none';document.getElementById('btnText').textContent='Analyzing…';
+  // Safety check
+  const allInputs = document.querySelectorAll('input, textarea');
+  const inputText = Array.from(allInputs).map(el => el.value).join(' ');
+  if (!isSafeInput(inputText)) {
+    showSafetyWarning();
+    btn.disabled=false;
+    document.getElementById('spinner').style.display='none';
+    document.getElementById('btnIcon').style.display='inline';
+    return;
+  }
+  const prompt=`You are a world-class prompt engineer. Analyze and improve this prompt for ${aiTool}.
+
+Original prompt: "${original}"
+Improvement focus: ${focus}
+
+Score the original 1-10, then create a dramatically improved version.
+Return ONLY valid JSON, no markdown:
+{"score_before":5,"score_after":9,"improvements":["Added specific role/persona","Defined output format","Added context and constraints","Specified tone and audience"],"improved_prompt":"The full improved prompt here"}`;
+  try{
+    const res=await fetch('/.netlify/functions/claude',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1500,messages:[{role:'user',content:prompt}]})});
+    const data=await res.json();
+    const parsed=JSON.parse(data.content[0].text.replace(/```json|```/g,'').trim());
+    document.getElementById('scoreBefore').textContent=parsed.score_before+'/10';
+    document.getElementById('scoreAfter').textContent=parsed.score_after+'/10';
+    document.getElementById('impItems').innerHTML=parsed.improvements.map(i=>`<div class="imp-item"><div class="imp-dot"></div><span>${i}</span></div>`).join('');
+    document.getElementById('improvedBox').textContent=parsed.improved_prompt;
+    document.getElementById('resultWrap').style.display='block';
+    document.getElementById('copyBtn').onclick=async()=>{
+      await navigator.clipboard.writeText(parsed.improved_prompt);
+      document.getElementById('copyBtn').textContent='✓ Copied!';
+      setTimeout(()=>{document.getElementById('copyBtn').textContent='Copy improved prompt';},2000);
+    };
+    document.getElementById('resultWrap').scrollIntoView({behavior:'smooth',block:'start'});
+  }catch(err){console.error(err);alert('Something went wrong.');}
+  finally{btn.disabled=false;document.getElementById('spinner').style.display='none';document.getElementById('btnIcon').style.display='inline';document.getElementById('btnText').textContent='Improve My Prompt';}
+}
+</script>
+</body>
+</html>

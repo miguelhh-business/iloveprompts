@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Suno Prompt Generator — Free AI Music Prompt Builder | iloveprompts.org</title>
+  <meta name="description" content="Generate perfect Suno prompts for AI music creation. Choose genre, mood, vocals, tempo, and get complete style tags and song descriptions instantly. Free Suno prompt generator.">
+  <meta name="keywords" content="Suno prompt generator, Suno AI prompts, AI music generator prompts, Suno style tags, Suno song generator">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://iloveprompts.org/iloveprompts-suno-prompt-generator.html">
+  <meta property="og:title" content="Suno Prompt Generator — Free AI Music Prompts">
+  <meta property="og:description" content="Generate perfect Suno prompts for AI music creation. Choose genre, mood, vocals, tempo, and get complete style tags and song descriptions instantly. Free Suno prompt generator.">
+  <meta property="og:url" content="https://iloveprompts.org/iloveprompts-suno-prompt-generator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="iloveprompts.org">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Suno Prompt Generator — Free AI Music Prompts">
+  <meta name="twitter:description" content="Generate perfect Suno prompts for AI music creation. Choose genre, mood, vocals, tempo, and get complete style tags and song descriptions instantly. Free Suno prompt generator.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Suno Prompt Generator — Free AI Music Prompts",
+    "description": "Generate perfect Suno prompts for AI music creation. Choose genre, mood, vocals, tempo, and get complete style tags and song descriptions instantly. Free Suno prompt generator.",
+    "url": "https://iloveprompts.org/iloveprompts-suno-prompt-generator.html",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "iloveprompts.org",
+      "url": "https://iloveprompts.org"
+    }
+  }
+  </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,700;12..96,800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d0d0f;--bg-card:#13131a;--bg-input:#1a1a24;--border:#22222e;--border-hover:#33334a;--accent:#6cfcd0;--accent2:#7c6cfc;--accent3:#fc6c8f;--text-primary:#f0efff;--text-secondary:#8888aa;--text-muted:#44445a;--font-title:'Bricolage Grotesque',sans-serif;--font-mono:'DM Mono',monospace;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--text-primary);font-family:var(--font-title);font-size:15px;line-height:1.6;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;width:700px;height:700px;background:radial-gradient(circle,rgba(108,252,208,0.06) 0%,transparent 70%);border-radius:50%;top:-200px;right:-150px;pointer-events:none;z-index:0;}
+body::after{content:'';position:fixed;width:500px;height:500px;background:radial-gradient(circle,rgba(124,108,252,0.05) 0%,transparent 70%);border-radius:50%;bottom:-150px;left:-100px;pointer-events:none;z-index:0;}
+
+nav{position:sticky;top:0;z-index:100;background:rgba(13,13,15,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 24px;height:58px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{font-family:var(--font-title);font-weight:800;font-size:18px;color:var(--text-primary);text-decoration:none;display:flex;align-items:center;gap:6px;}
+.nav-logo .heart{color:var(--accent3);}
+.nav-links{display:flex;gap:4px;list-style:none;}
+.nav-links a{color:var(--text-secondary);text-decoration:none;font-size:13px;font-weight:500;padding:5px 12px;border-radius:8px;transition:all 0.2s;}
+.nav-links a:hover{background:var(--bg-input);color:var(--text-primary);}
+.nav-links a.active{background:rgba(108,252,208,0.08);color:var(--accent);}
+
+.hero{position:relative;z-index:1;padding:56px 24px 40px;max-width:800px;margin:0 auto;text-align:center;}
+.back-link{display:inline-flex;align-items:center;gap:6px;color:var(--text-muted);text-decoration:none;font-size:13px;font-family:var(--font-mono);margin-bottom:20px;transition:color 0.2s;}
+.back-link:hover{color:var(--text-secondary);}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(108,252,208,0.08);border:1px solid rgba(108,252,208,0.2);color:var(--accent);font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:20px;font-family:var(--font-mono);}
+.hero h1{font-size:clamp(32px,5vw,52px);font-weight:800;line-height:1.05;letter-spacing:-2px;margin-bottom:14px;}
+.hero h1 .g{background:linear-gradient(135deg,var(--accent) 0%,var(--accent2) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero p{color:var(--text-secondary);font-size:16px;max-width:500px;margin:0 auto;}
+
+.main{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:0 24px 80px;display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start;}
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:20px;padding:28px;position:relative;overflow:hidden;}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent),var(--accent2),transparent);opacity:0.5;}
+.card-title{font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);font-family:var(--font-mono);margin-bottom:24px;}
+
+.field{margin-bottom:16px;}
+label{display:block;font-size:12px;font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;font-family:var(--font-mono);}
+input,textarea{width:100%;background:var(--bg-input);border:1px solid var(--border);border-radius:10px;color:var(--text-primary);font-family:var(--font-title);font-size:14px;padding:11px 14px;transition:border-color 0.2s;outline:none;}
+input:focus,textarea:focus{border-color:rgba(108,252,208,0.35);}
+input::placeholder,textarea::placeholder{color:var(--text-muted);}
+textarea{resize:vertical;min-height:70px;}
+
+.divider{height:1px;background:var(--border);margin:18px 0;}
+.section-label{font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:0.12em;color:var(--text-muted);text-transform:uppercase;margin-bottom:12px;}
+
+.pill-row{display:flex;flex-wrap:wrap;gap:6px;}
+.pill{padding:5px 12px;border-radius:100px;border:1px solid var(--border);background:transparent;color:var(--text-secondary);font-size:12px;font-weight:500;cursor:pointer;transition:all 0.15s;user-select:none;}
+.pill:hover{border-color:var(--border-hover);color:var(--text-primary);}
+.pill.active{background:rgba(108,252,208,0.08);border-color:rgba(108,252,208,0.3);color:var(--accent);}
+
+.btn-generate{width:100%;margin-top:20px;padding:15px;background:linear-gradient(135deg,var(--accent) 0%,var(--accent2) 100%);color:#0d0d0f;border:none;border-radius:12px;font-family:var(--font-title);font-size:15px;font-weight:800;cursor:pointer;transition:opacity 0.2s,transform 0.15s,box-shadow 0.2s;display:flex;align-items:center;justify-content:center;gap:8px;}
+.btn-generate:hover{opacity:0.9;transform:translateY(-1px);box-shadow:0 8px 32px rgba(108,252,208,0.2);}
+.btn-generate:disabled{opacity:0.5;cursor:not-allowed;transform:none;box-shadow:none;}
+.spinner{width:16px;height:16px;border:2px solid rgba(13,13,15,0.3);border-top-color:#0d0d0f;border-radius:50%;animation:spin 0.7s linear infinite;display:none;}
+@keyframes spin{to{transform:rotate(360deg);}}
+
+.output-panel{display:flex;flex-direction:column;gap:14px;}
+.output-empty{background:var(--bg-card);border:1px dashed var(--border);border-radius:20px;padding:60px 28px;text-align:center;color:var(--text-muted);font-size:14px;display:flex;flex-direction:column;align-items:center;gap:14px;}
+
+.prompt-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;overflow:hidden;animation:fadeUp 0.3s ease both;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+.prompt-header{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;border-bottom:1px solid var(--border);}
+.prompt-tag{font-family:var(--font-mono);font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(108,252,208,0.1);color:var(--accent);}
+.prompt-type{font-size:12px;color:var(--text-secondary);}
+
+.prompt-section{padding:14px 18px;border-bottom:1px solid var(--border);}
+.prompt-section-label{font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px;}
+.prompt-section-content{font-size:13.5px;color:var(--text-primary);line-height:1.7;white-space:pre-wrap;}
+.prompt-section-content.tags{color:var(--accent);font-family:var(--font-mono);font-size:12px;}
+
+.prompt-actions{padding:10px 18px;display:flex;align-items:center;justify-content:space-between;gap:8px;}
+.copy-btn{background:var(--bg-input);border:1px solid var(--border);border-radius:8px;color:var(--text-secondary);font-size:12px;font-weight:600;padding:6px 14px;cursor:pointer;transition:all 0.18s;display:flex;align-items:center;gap:6px;font-family:var(--font-title);}
+.copy-btn:hover{border-color:var(--accent);color:var(--accent);}
+.copy-btn.copied{border-color:var(--accent);color:var(--accent);}
+.copy-all-btn{background:rgba(108,252,208,0.08);border:1px solid rgba(108,252,208,0.2);border-radius:8px;color:var(--accent);font-size:12px;font-weight:600;padding:6px 14px;cursor:pointer;transition:all 0.18s;font-family:var(--font-title);}
+.copy-all-btn:hover{background:rgba(108,252,208,0.14);}
+
+footer{position:relative;z-index:1;text-align:center;padding:32px 24px;border-top:1px solid var(--border);color:var(--text-muted);font-size:13px;}
+footer a{color:var(--text-muted);text-decoration:none;}
+@media(max-width:700px){.main{grid-template-columns:1fr;}.nav-links{display:none;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">i <span class="heart">♥</span> prompts</a>
+  <ul class="nav-links">
+    <li><a href="iloveprompts-chatgpt-prompt-generator.html">ChatGPT</a></li>
+    <li><a href="iloveprompts-midjourney-prompt-generator.html">Midjourney</a></li>
+    <li><a href="iloveprompts-suno-prompt-generator.html" class="active">Suno</a></li>
+    <li><a href="iloveprompts-runway-prompt-generator.html">Runway</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <a href="index.html" class="back-link">← All tools</a>
+  <div class="hero-badge">🎵 AI Music Generation</div>
+  <h1>Generate <span class="g">Perfect</span><br>Suno Prompts</h1>
+  <p>Describe your song idea. We'll engineer a complete Suno prompt with genre, mood, instrumentation, style tags, and lyrical direction.</p>
+</header>
+
+<main class="main">
+  <div class="card">
+    <p class="card-title">Your Song</p>
+
+    <div class="field">
+      <label>Song Concept / Theme</label>
+      <textarea id="concept" placeholder="e.g. A melancholic love song about leaving your hometown for the last time, driving away at night"></textarea>
+    </div>
+
+    <div class="divider"></div>
+    <p class="section-label">Genre</p>
+    <div class="field">
+      <div class="pill-row" id="genrePills">
+        <div class="pill active" data-value="indie pop">Indie Pop</div>
+        <div class="pill" data-value="hip hop">Hip Hop</div>
+        <div class="pill" data-value="lo-fi">Lo-fi</div>
+        <div class="pill" data-value="electronic">Electronic</div>
+        <div class="pill" data-value="folk acoustic">Folk</div>
+        <div class="pill" data-value="r&b soul">R&B Soul</div>
+        <div class="pill" data-value="rock">Rock</div>
+        <div class="pill" data-value="jazz">Jazz</div>
+        <div class="pill" data-value="cinematic orchestral">Cinematic</div>
+        <div class="pill" data-value="reggaeton">Reggaeton</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <p class="section-label">Mood</p>
+    <div class="field">
+      <div class="pill-row" id="moodPills">
+        <div class="pill active" data-value="melancholic">Melancholic</div>
+        <div class="pill" data-value="euphoric">Euphoric</div>
+        <div class="pill" data-value="chill and relaxed">Chill</div>
+        <div class="pill" data-value="intense and powerful">Intense</div>
+        <div class="pill" data-value="romantic">Romantic</div>
+        <div class="pill" data-value="nostalgic">Nostalgic</div>
+        <div class="pill" data-value="dark and mysterious">Dark</div>
+        <div class="pill" data-value="uplifting">Uplifting</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <p class="section-label">Vocals</p>
+    <div class="field">
+      <div class="pill-row" id="vocalPills">
+        <div class="pill active" data-value="female vocals">Female</div>
+        <div class="pill" data-value="male vocals">Male</div>
+        <div class="pill" data-value="duet male and female">Duet</div>
+        <div class="pill" data-value="no vocals instrumental">Instrumental</div>
+        <div class="pill" data-value="choir vocals">Choir</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <p class="section-label">Tempo</p>
+    <div class="field">
+      <div class="pill-row" id="tempoPills">
+        <div class="pill" data-value="slow tempo 60-75 bpm">Slow</div>
+        <div class="pill active" data-value="mid tempo 90-110 bpm">Mid</div>
+        <div class="pill" data-value="uptempo 120-140 bpm">Fast</div>
+        <div class="pill" data-value="very fast 150+ bpm">Very Fast</div>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Artist / Sound Reference <span style="color:var(--text-muted);font-size:11px">(optional)</span></label>
+      <input type="text" id="reference" placeholder="e.g. in the style of Bon Iver, Phoebe Bridgers, or early Taylor Swift">
+    </div>
+
+    <button class="btn-generate" id="generateBtn" onclick="generatePrompts()">
+      <span id="btnIcon">🎵</span>
+      <span id="btnText">Generate 2 Suno Prompts</span>
+      <div class="spinner" id="spinner"></div>
+    </button>
+  </div>
+
+  <div class="output-panel" id="outputPanel">
+    <div class="output-empty" id="emptyState">
+      <div style="font-size:40px;opacity:0.3;">🎵</div>
+      <span>Describe your song and click Generate.<br>You'll get 2 complete Suno-ready prompts.</span>
+    </div>
+  </div>
+</main>
+
+<footer><p>© 2025 iloveprompts.org — Free AI Prompt Tools &nbsp;·&nbsp; <a href="#">Privacy</a> &nbsp;·&nbsp; <a href="#">Terms</a></p></footer>
+
+<script>
+const ANTHROPIC_API_KEY='YOUR-API-KEY-HERE';
+
+[['#genrePills'],['#moodPills'],['#vocalPills'],['#tempoPills']].forEach(([sel])=>{
+  document.querySelectorAll(sel+' .pill').forEach(p=>p.addEventListener('click',()=>{
+    document.querySelectorAll(sel+' .pill').forEach(x=>x.classList.remove('active'));p.classList.add('active');
+  }));
+});
+
+function getVal(id){return document.getElementById(id)?.value?.trim()||'';}
+function getActive(sel){return document.querySelector(sel+'.active')?.dataset?.value||'';}
+
+
+function isSafeInput(text) {
+  const blocked = [
+    'hack','exploit','malware','virus','phishing','ddos','ransomware',
+    'bomb','weapon','explosive','poison','drug synthesis','meth','cocaine manufacture',
+    'child','minor','underage','lolita',
+    'kill','murder','assassinate','shoot','stab',
+    'fraud','scam','fake id','counterfeit','money laundering',
+    'bypass security','crack password','sql injection','zero-day'
+  ];
+  const lower = text.toLowerCase();
+  return !blocked.some(word => lower.includes(word));
+}
+
+function showSafetyWarning() {
+  const existing = document.getElementById('safety-warning');
+  if (existing) return;
+  const warn = document.createElement('div');
+  warn.id = 'safety-warning';
+  warn.style.cssText = 'position:fixed;top:70px;left:50%;transform:translateX(-50%);background:#1a0a0a;border:1px solid rgba(252,108,143,0.4);color:#fc6c8f;padding:12px 20px;border-radius:10px;font-size:13px;z-index:9999;max-width:400px;text-align:center;font-family:var(--font-title,sans-serif);';
+  warn.textContent = 'This tool is for creative and professional use only. We cannot process this request.';
+  document.body.appendChild(warn);
+  setTimeout(() => warn.remove(), 4000);
+}
+async function generatePrompts(){
+  const concept=getVal('concept'),reference=getVal('reference');
+  const genre=getActive('#genrePills .pill'),mood=getActive('#moodPills .pill'),vocals=getActive('#vocalPills .pill'),tempo=getActive('#tempoPills .pill');
+  if(!concept){alert('Please describe your song concept.');return;}
+
+  const btn=document.getElementById('generateBtn');
+  btn.disabled=true;document.getElementById('spinner').style.display='block';document.getElementById('btnIcon').style.display='none';document.getElementById('btnText').textContent='Composing prompts…';
+
+  // Safety check
+  const allInputs = document.querySelectorAll('input, textarea');
+  const inputText = Array.from(allInputs).map(el => el.value).join(' ');
+  if (!isSafeInput(inputText)) {
+    showSafetyWarning();
+    btn.disabled=false;
+    document.getElementById('spinner').style.display='none';
+    document.getElementById('btnIcon').style.display='inline';
+    return;
+  }
+  const prompt=`You are a Suno AI music expert. Generate exactly 2 complete Suno prompts for this song.
+
+Song concept: ${concept}
+Genre: ${genre}
+Mood: ${mood}
+Vocals: ${vocals}
+Tempo: ${tempo}
+Reference: ${reference||'none'}
+
+For each prompt, generate:
+1. A "Style Tags" string — comma-separated Suno style tags (genre, mood, instruments, production style, vocal type)
+2. A "Song Description" — 2-3 sentences describing the song for Suno's description field
+3. A "Lyrics Direction" — brief structure note like [Verse], [Chorus], [Bridge] with lyrical theme/mood for each section
+
+Prompt 1: Faithful to the requested style
+Prompt 2: An unexpected creative twist that still fits the concept
+
+Return ONLY valid JSON, no markdown, no backticks:
+{"prompts":[{"label":"Faithful","style_tags":"tag1, tag2, tag3, tag4, tag5, tag6","description":"2-3 sentence song description","lyrics_direction":"[Verse]\\ntheme/mood\\n\\n[Chorus]\\ntheme/mood\\n\\n[Bridge]\\ntheme/mood"},{"label":"Creative Twist","style_tags":"tag1, tag2, tag3, tag4, tag5, tag6","description":"2-3 sentence song description","lyrics_direction":"[Verse]\\ntheme/mood\\n\\n[Chorus]\\ntheme/mood\\n\\n[Bridge]\\ntheme/mood"}]}`;
+
+  try{
+    const res=await fetch('/.netlify/functions/claude',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:2000,messages:[{role:'user',content:prompt}]})});
+    const data=await res.json();
+    const clean=data.content[0].text.replace(/```json|```/g,'').trim();
+    const parsed=JSON.parse(clean);
+    renderPrompts(parsed.prompts);
+  }catch(err){console.error(err);alert('Something went wrong. Please check your API key.');}
+  finally{btn.disabled=false;document.getElementById('spinner').style.display='none';document.getElementById('btnIcon').style.display='inline';document.getElementById('btnText').textContent='Generate 2 Suno Prompts';}
+}
+
+function renderPrompts(prompts){
+  const panel=document.getElementById('outputPanel');
+  panel.querySelectorAll('.prompt-card').forEach(el=>el.remove());
+  document.getElementById('emptyState').style.display='none';
+
+  prompts.forEach((p,i)=>{
+    const fullText=`Style Tags: ${p.style_tags}\n\nDescription: ${p.description}\n\nLyrics Direction:\n${p.lyrics_direction}`;
+    const card=document.createElement('div');
+    card.className='prompt-card';
+    card.style.animationDelay=(i*0.12)+'s';
+    card.innerHTML=`
+      <div class="prompt-header">
+        <span class="prompt-tag">${p.label}</span>
+        <span class="prompt-type">Suno prompt</span>
+      </div>
+      <div class="prompt-section">
+        <div class="prompt-section-label">Style Tags</div>
+        <div class="prompt-section-content tags">${escapeHtml(p.style_tags)}</div>
+      </div>
+      <div class="prompt-section">
+        <div class="prompt-section-label">Song Description</div>
+        <div class="prompt-section-content">${escapeHtml(p.description)}</div>
+      </div>
+      <div class="prompt-section" style="border-bottom:none;">
+        <div class="prompt-section-label">Lyrics Direction</div>
+        <div class="prompt-section-content">${escapeHtml(p.lyrics_direction)}</div>
+      </div>
+      <div class="prompt-actions">
+        <button class="copy-btn" data-text="${escapeAttr(p.style_tags)}">Copy tags</button>
+        <button class="copy-all-btn" data-text="${escapeAttr(fullText)}">Copy all</button>
+      </div>`;
+    card.querySelectorAll('[data-text]').forEach(btn=>{
+      btn.addEventListener('click',async function(){
+        try{
+          await navigator.clipboard.writeText(this.dataset.text);
+          const orig=this.textContent;this.textContent='✓ Copied!';
+          setTimeout(()=>{this.textContent=orig;},2000);
+        }catch{alert('Please copy manually.');}
+      });
+    });
+    panel.appendChild(card);
+  });
+}
+
+function escapeHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function escapeAttr(s){return s.replace(/'/g,'&#39;').replace(/"/g,'&quot;');}
+</script>
+</body>
+</html>
