@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — iloveprompts.org</title>
+<meta name="description" content="About iloveprompts.org — who we are, why we built free AI prompt generators, and how our tools help you get better results from ChatGPT, Claude, Midjourney, and more.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://iloveprompts.org/about.html">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #0a0a0a;
+    --surface: #121212;
+    --border: #222;
+    --text: #e8e8e8;
+    --text-muted: #888;
+    --accent: #ff4d6d;
+    --link: #9eb8ff;
+  }
+  html, body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+    line-height: 1.7;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .nav {
+    border-bottom: 1px solid var(--border);
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .brand {
+    font-weight: 600;
+    font-size: 17px;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.3px;
+  }
+  .brand .heart { color: var(--accent); }
+  .nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 14px;
+    transition: color 0.15s;
+  }
+  .nav-links a:hover { color: var(--text); }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+  .eyebrow {
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  h1 {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+    margin-bottom: 18px;
+    line-height: 1.15;
+  }
+  .lede {
+    font-size: 18px;
+    color: #b8b8b8;
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
+  h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 44px;
+    margin-bottom: 14px;
+    letter-spacing: -0.3px;
+  }
+  h3 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 28px;
+    margin-bottom: 10px;
+  }
+  p { margin-bottom: 16px; color: #c8c8c8; }
+  ul { margin: 12px 0 20px 22px; color: #c8c8c8; }
+  li { margin-bottom: 10px; }
+  a { color: var(--link); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: #c0d3ff; }
+  .callout {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px 24px;
+    margin: 28px 0;
+  }
+  .callout p:last-child { margin-bottom: 0; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin: 20px 0 28px;
+  }
+  .grid-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+  }
+  .grid-item strong { display: block; margin-bottom: 4px; color: var(--text); font-size: 15px; }
+  .grid-item span { font-size: 13px; color: var(--text-muted); }
+  blockquote {
+    border-left: 3px solid var(--accent);
+    padding-left: 18px;
+    margin: 24px 0;
+    font-style: italic;
+    color: #d0d0d0;
+  }
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 28px 24px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 40px;
+  }
+  footer a { color: var(--text-muted); margin: 0 10px; }
+  footer a:hover { color: var(--text); }
+  @media (max-width: 600px) {
+    h1 { font-size: 30px; }
+    .lede { font-size: 16px; }
+    main { padding: 36px 20px 60px; }
+    .nav-links a { margin-left: 14px; }
+    .grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="brand">i <span class="heart">♥</span> prompts</a>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+  </div>
+</nav>
+
+<main>
+  <div class="eyebrow">About</div>
+  <h1>Prompts that actually work — built by someone who uses them daily.</h1>
+  <p class="lede">iloveprompts.org is a small, independent project. It exists because writing good AI prompts is a skill, and most people shouldn't have to spend weeks learning frameworks like CO-STAR just to get a decent output from ChatGPT or Midjourney. These tools do that work for you, for free, without signup.</p>
+
+  <h2>Why this site exists</h2>
+  <p>When AI image and text generators went mainstream, a gap opened between two groups of users. On one side, power users — prompt engineers, designers, marketers — figured out structured frameworks (CO-STAR, parameter stacking, negative prompting, style tags) and got consistently excellent output. On the other side, everyone else typed a sentence, got a generic result, and walked away disappointed.</p>
+  <p>The frameworks weren't secret. They were just scattered across Reddit threads, X posts, YouTube tutorials, and Discord servers. And even once you knew them, you had to remember the exact structure every single time.</p>
+  <p>iloveprompts.org is my attempt to close that gap. Each tool on the site takes a proven prompt framework and wraps it in a simple guided form. You fill in the fields. The tool assembles the prompt in the correct structure for the specific AI platform you're targeting. You paste it. You get dramatically better results.</p>
+
+  <div class="callout">
+    <p><strong>Design principle:</strong> No signup. No paywall. No "upgrade for more." Every tool is fully free and always will be. The site is supported by unobtrusive display ads.</p>
+  </div>
+
+  <h2>Who is behind it</h2>
+  <p>My name is Miguel. I'm an architect by profession, based in Auckland, New Zealand, and I've been using AI tools daily since 2023 — both for creative work (architectural renders, moodboards, material studies) and for the text-heavy parts of my practice (client correspondence, code compliance research, documentation).</p>
+  <p>Along the way I started building small utilities for myself: a template for Midjourney renders, a CO-STAR form for client emails, a structured Suno prompt for testing song ideas. Eventually I collected them into a single site and added more tools for platforms I don't use as often, working from the community-established best practices for each one.</p>
+  <p>The site is currently a solo project. It's built as a static site (pure HTML, CSS, and JavaScript — no frameworks, no trackers beyond standard analytics and advertising) and hosted on Netlify. The one exception is the <em>Prompt Improver</em> tool, which uses the Anthropic API to refine a user-supplied prompt in real time.</p>
+
+  <h2>What makes our prompts different</h2>
+
+  <h3>Framework-first, not template-first</h3>
+  <p>Most prompt sites hand you a library of pre-written prompts: "100 ChatGPT prompts for marketers", "500 Midjourney prompts for logos", and so on. These are useful for inspiration, but they break the moment your use case doesn't match. Our tools use frameworks — structured patterns that work across use cases — so the output fits <em>your</em> situation, not a hypothetical one.</p>
+
+  <h3>Platform-specific output</h3>
+  <p>A great Midjourney prompt is not a great DALL·E prompt. A Claude prompt is not a ChatGPT prompt. Our tools know the syntax conventions of each platform and format the output accordingly — aspect ratio flags and style references for Midjourney, system-role framing for Claude, natural-language scene descriptions for Runway, and so on.</p>
+
+  <h3>Three variations, every time</h3>
+  <p>Every generator produces three versions of your prompt — not one. This is deliberate: AI output is probabilistic, and a single prompt often misses in subtle ways. Having three variations to test against each other is how professional prompt engineers actually work.</p>
+
+  <h2>What's on the site</h2>
+  <div class="grid">
+    <div class="grid-item">
+      <strong>Images</strong>
+      <span>Midjourney, DALL·E 3, Stable Diffusion</span>
+    </div>
+    <div class="grid-item">
+      <strong>Text</strong>
+      <span>ChatGPT, Claude, Gemini</span>
+    </div>
+    <div class="grid-item">
+      <strong>Music</strong>
+      <span>Suno, Udio</span>
+    </div>
+    <div class="grid-item">
+      <strong>Video</strong>
+      <span>Runway, Pika, Kling</span>
+    </div>
+    <div class="grid-item">
+      <strong>Code</strong>
+      <span>ChatGPT, Claude, Copilot</span>
+    </div>
+    <div class="grid-item">
+      <strong>By profession</strong>
+      <span>Architects, marketers, developers, and more</span>
+    </div>
+  </div>
+
+  <h2>Editorial independence</h2>
+  <p>iloveprompts.org is not affiliated with, partnered with, endorsed by, or paid by OpenAI, Anthropic, Midjourney, Runway, Suno, Google, or any other AI platform mentioned on the site. References to these platforms are descriptive only. Trademarks are the property of their respective owners.</p>
+  <p>The site is supported by display advertising through Google AdSense. Ads are labelled as such and do not influence which frameworks or platforms the tools support. If the site ever adds affiliate links to paid services, they will be clearly disclosed.</p>
+
+  <h2>How the tools are kept current</h2>
+  <p>AI platforms evolve quickly. Midjourney ships new parameters. Claude and ChatGPT release new models. Suno adjusts its style-tag syntax. I update the tools when those changes land, starting with the platforms I use most often and rolling out to the rest as user feedback comes in. If you notice an outdated prompt structure or a parameter that no longer works, please let me know — the <a href="/contact.html">contact page</a> is the fastest way to reach me.</p>
+
+  <h2>Feedback and suggestions</h2>
+  <p>If there's a platform you'd like a tool for, a framework you think we should add, or a use case you feel isn't well-served by the current set, I'd love to hear about it. The site exists because I wanted tools like this, and the roadmap is shaped mostly by what users actually ask for.</p>
+
+  <blockquote>"Stop getting generic AI responses." — that's the whole pitch of the site, and the honest reason it exists.</blockquote>
+
+  <p>Thanks for visiting. I hope the tools save you time.</p>
+
+  <p style="margin-top: 28px; color: var(--text-muted); font-size: 14px;">— Miguel<br>Auckland, New Zealand</p>
+
+</main>
+
+<footer>
+  <a href="/">Home</a>
+  <a href="/about.html">About</a>
+  <a href="/privacy.html">Privacy</a>
+  <a href="/terms.html">Terms</a>
+  <a href="/contact.html">Contact</a>
+  <p style="margin-top: 12px;">© 2026 iloveprompts.org · Free AI Prompt Tools</p>
+</footer>
+
+</body>
+</html>

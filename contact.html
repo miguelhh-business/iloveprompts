@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — iloveprompts.org</title>
+<meta name="description" content="Get in touch with iloveprompts.org. Send feedback, report a bug, suggest a new AI prompt tool, or ask a question about our free generators.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://iloveprompts.org/contact.html">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #0a0a0a;
+    --surface: #121212;
+    --border: #222;
+    --text: #e8e8e8;
+    --text-muted: #888;
+    --accent: #ff4d6d;
+    --link: #9eb8ff;
+    --input-bg: #0f0f0f;
+  }
+  html, body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+    line-height: 1.7;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .nav {
+    border-bottom: 1px solid var(--border);
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .brand {
+    font-weight: 600;
+    font-size: 17px;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.3px;
+  }
+  .brand .heart { color: var(--accent); }
+  .nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 14px;
+    transition: color 0.15s;
+  }
+  .nav-links a:hover { color: var(--text); }
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+  .eyebrow {
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  h1 {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+    margin-bottom: 18px;
+    line-height: 1.15;
+  }
+  .lede {
+    font-size: 17px;
+    color: #b8b8b8;
+    margin-bottom: 36px;
+    line-height: 1.6;
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 12px;
+    letter-spacing: -0.3px;
+  }
+  p { margin-bottom: 14px; color: #c8c8c8; }
+  a { color: var(--link); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: #c0d3ff; }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px;
+    margin-top: 24px;
+  }
+
+  form { display: flex; flex-direction: column; gap: 16px; }
+  label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  label span { color: var(--text-muted); font-weight: 400; }
+  input, select, textarea {
+    width: 100%;
+    background: var(--input-bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-family: inherit;
+    font-size: 15px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    transition: border-color 0.15s;
+  }
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--link);
+  }
+  textarea { min-height: 140px; resize: vertical; line-height: 1.5; }
+
+  .submit {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s;
+    font-family: inherit;
+    align-self: flex-start;
+  }
+  .submit:hover { background: #ff3258; }
+  .submit:disabled { opacity: 0.6; cursor: not-allowed; }
+
+  .honeypot {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+  }
+
+  .status {
+    padding: 14px 18px;
+    border-radius: 8px;
+    margin-top: 14px;
+    font-size: 14px;
+    display: none;
+  }
+  .status.success {
+    background: #0f2b1a;
+    border: 1px solid #1e6b3f;
+    color: #8df0b0;
+    display: block;
+  }
+  .status.error {
+    background: #2b0f13;
+    border: 1px solid #6b1e28;
+    color: #f08d9e;
+    display: block;
+  }
+
+  .direct-email {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-top: 28px;
+    padding-top: 22px;
+    border-top: 1px solid var(--border);
+  }
+  .direct-email strong { color: var(--text); }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 28px 24px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 40px;
+  }
+  footer a { color: var(--text-muted); margin: 0 10px; }
+  footer a:hover { color: var(--text); }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 30px; }
+    .lede { font-size: 15px; }
+    main { padding: 36px 20px 60px; }
+    .nav-links a { margin-left: 14px; }
+    .card { padding: 22px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="brand">i <span class="heart">♥</span> prompts</a>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+  </div>
+</nav>
+
+<main>
+  <div class="eyebrow">Contact</div>
+  <h1>Get in touch</h1>
+  <p class="lede">Feedback, bug reports, tool suggestions, partnership questions, takedown requests — drop a message below and I'll get back to you. Usually within 2–3 days.</p>
+
+  <h2>Send a message</h2>
+  <div class="card">
+    <form id="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact">
+      <div class="honeypot">
+        <label>Don't fill this out if you're human: <input name="bot-field"></label>
+      </div>
+
+      <div>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required autocomplete="name" placeholder="Your name">
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com">
+      </div>
+
+      <div>
+        <label for="topic">Topic</label>
+        <select id="topic" name="topic" required>
+          <option value="">— Select a topic —</option>
+          <option value="feedback">General feedback</option>
+          <option value="bug">Bug report</option>
+          <option value="suggestion">Tool suggestion</option>
+          <option value="partnership">Partnership / business</option>
+          <option value="privacy">Privacy / data request</option>
+          <option value="takedown">Takedown / legal</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required placeholder="Tell me what's on your mind — more detail helps me reply faster."></textarea>
+      </div>
+
+      <button type="submit" class="submit" id="submit-btn">Send message</button>
+      <div class="status" id="status"></div>
+    </form>
+
+    <div class="direct-email">
+      <p>Prefer email? You can also reach me directly at <strong>hello@iloveprompts.org</strong>.</p>
+    </div>
+  </div>
+
+  <h2>Before you write</h2>
+  <p><strong>Suggesting a new tool?</strong> Include the AI platform name, a link to its documentation if it has public prompt syntax, and an example of the kind of output you'd want the tool to help generate.</p>
+  <p><strong>Reporting a bug?</strong> Tell me which tool, what browser and device you're on, and what you expected vs what actually happened. A screenshot is gold.</p>
+  <p><strong>Privacy request?</strong> You can read our full <a href="/privacy.html">Privacy Policy</a> first — the quick version is that we don't require accounts and don't store prompts on our servers, so in most cases there's very little personal data to retrieve or delete. Use this form to confirm and we'll handle anything that applies to your situation.</p>
+
+  <h2>Response times</h2>
+  <p>This is a solo project, so replies aren't instant. Most messages get a response within 2–3 business days. Bug reports and privacy requests are prioritised.</p>
+
+</main>
+
+<footer>
+  <a href="/">Home</a>
+  <a href="/about.html">About</a>
+  <a href="/privacy.html">Privacy</a>
+  <a href="/terms.html">Terms</a>
+  <a href="/contact.html">Contact</a>
+  <p style="margin-top: 12px;">© 2026 iloveprompts.org · Free AI Prompt Tools</p>
+</footer>
+
+<script>
+  // Netlify Forms works automatically on Netlify-hosted sites via the data-netlify="true" attribute.
+  // This script just provides friendly UX feedback (success/error message) after submit.
+  (function() {
+    var form = document.getElementById('contact-form');
+    var status = document.getElementById('status');
+    var btn = document.getElementById('submit-btn');
+    if (!form) return;
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      status.className = 'status';
+      status.textContent = '';
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+
+      var data = new FormData(form);
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(data).toString()
+      }).then(function(response) {
+        if (response.ok) {
+          status.className = 'status success';
+          status.textContent = 'Thanks — your message was sent. I\'ll be in touch soon.';
+          form.reset();
+        } else {
+          throw new Error('Request failed');
+        }
+      }).catch(function() {
+        status.className = 'status error';
+        status.innerHTML = 'Something went wrong sending the form. Please email <strong>hello@iloveprompts.org</strong> directly.';
+      }).finally(function() {
+        btn.disabled = false;
+        btn.textContent = 'Send message';
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
